@@ -1,0 +1,64 @@
+components:
+- layout_properties: {grid_position: 'BZUSMD,TZYJKA'}
+  name: label_2
+  properties: {align: center, background: '', bold: false, border: '', font: Yeseva One, font_size: 24, foreground: 'theme:Primary 700', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Get in touch, tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'VGTHPW,PKVTAX'}
+  name: label_3
+  properties: {align: center, background: '', bold: false, border: '', font: '', font_size: 16, foreground: 'theme:Primary 700', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Drop us a line at info@cupcakesco.com, or fill out the form below and we''ll get back to you.', tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'IWOPPM,OMRFDC'}
+  name: spacer_3
+  properties: {height: 32}
+  type: Spacer
+- components:
+  - layout_properties: {grid_position: 'BTZDVT,RAFOPF'}
+    name: name_box
+    properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: Name, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+    type: TextBox
+  - event_bindings: {}
+    layout_properties: {grid_position: 'BTZDVT,HOMWBL'}
+    name: email_box
+    properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: Email, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: email, underline: false, visible: true}
+    type: TextBox
+  - layout_properties: {grid_position: 'ZOWEJE,QHAKAZ'}
+    name: message_box
+    properties: {align: left, auto_expand: false, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', height: 110, italic: false, placeholder: Type your message here..., role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: TextArea
+  layout_properties: {grid_position: 'IWOPPM,FUODEC'}
+  name: column_panel_1
+  properties: {background: 'theme:Neutral', border: '', col_spacing: medium, col_widths: '{"RAFOPF":30,"HOMWBL":30}', foreground: 'theme:Primary 700', role: null, spacing_above: none, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+  type: ColumnPanel
+- layout_properties: {grid_position: 'IWOPPM,WHTFDD'}
+  name: spacer_2
+  properties: {height: 112}
+  type: Spacer
+- event_bindings: {click: send_button_click}
+  layout_properties: {grid_position: 'ZWSLLM,MOHPZR'}
+  name: send_button
+  properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: 'fa:arrow-right', icon_align: left, italic: false, role: secondary-color, spacing_above: small, spacing_below: small, text: send, tooltip: '', underline: false, visible: true}
+  type: Button
+- layout_properties: {grid_position: 'UTHMNA,ASLGDW'}
+  name: spacer_4
+  properties: {height: 32}
+  type: Spacer
+- layout_properties: {grid_position: 'CRMKYV,VRFZPI'}
+  name: label_1
+  properties: {align: center, background: '', bold: false, border: '', font: Yeseva One, font_size: 24, foreground: 'theme:Primary 700', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Visit us in store, tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'AOJEMO,UNGIIQ'}
+  name: spacer_5
+  properties: {height: 4}
+  type: Spacer
+- layout_properties: {grid_position: 'KJLGRB,YNNHNY'}
+  name: map_1
+  properties: {height: 321}
+  type: GoogleMap
+- layout_properties: {grid_position: 'WGFMAF,GRAYQP'}
+  name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+container:
+  properties: {background: '', border: '', col_spacing: none, col_widths: '{"GRAYQP":30,"OMRFDC":11,"FUODEC":58,"WHTFDD":11}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+  type: ColumnPanel
+is_package: true

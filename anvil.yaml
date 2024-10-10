@@ -1,0 +1,77 @@
+allow_embedding: false
+correct_dependency_ids: {}
+db_schema:
+  contact:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: name
+      type: string
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    - admin_ui: {width: 200}
+      name: message
+      type: string
+    - admin_ui: {width: 200}
+      name: date
+      type: datetime
+    server: full
+    title: Contact
+  orders:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: charge_id
+      type: string
+    - admin_ui: {width: 200}
+      name: order
+      type: simpleObject
+    server: full
+    title: Orders
+  products:
+    client: search
+    columns:
+    - admin_ui: {width: 200}
+      name: name
+      type: string
+    - admin_ui: {width: 200}
+      name: description
+      type: string
+    - admin_ui: {width: 200}
+      name: price
+      type: number
+    - admin_ui: {width: 200}
+      name: img
+      type: media
+    - admin_ui: {width: 200}
+      name: best_seller
+      type: bool
+    server: full
+    title: Products
+  subscribers:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    server: full
+    title: Subscribers
+dependencies: []
+name: Clone of Shop Template (2)
+native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Yeseva+One&display=swap" rel="stylesheet">'}
+package_name: Shop_Template
+renamed: true
+runtime_options: {client_version: '3', server_spec: null, server_version: python3-sandbox, version: 2}
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/google.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/stripe.yml
+startup: {module: Main, type: form}
+startup_form: null

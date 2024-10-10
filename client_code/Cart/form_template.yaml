@@ -1,0 +1,82 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'JPOURI,RFTNMJ'}
+    name: empty_cart_label
+    properties: {align: center, background: '', bold: false, border: '', font: '', font_size: 16, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Looks like there's nothing in your cart right now., tooltip: '', underline: false, visible: true}
+    type: Label
+  - event_bindings: {click: shop_button_click}
+    layout_properties: {grid_position: 'HQMVFH,CGYRIM'}
+    name: shop_button
+    properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: secondary-color, spacing_above: small, spacing_below: small, text: Shop Now, tooltip: '', underline: false, visible: true}
+    type: Button
+  - layout_properties: {grid_position: 'EFILGL,RXYCXC'}
+    name: spacer_1
+    properties: {height: 120}
+    type: Spacer
+  layout_properties: {full_width_row: true, grid_position: 'TSNUCH,CFILMX'}
+  name: empty_cart_panel
+  properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: false, wrap_on: mobile}
+  type: ColumnPanel
+- components:
+  - layout_properties: {grid_position: 'OUWTBH,SLTMFK HUQMJY,OOKOKD'}
+    name: label_1
+    properties: {align: left, background: '', bold: false, border: '', font: Yeseva One, font_size: 20, foreground: 'theme:Primary 700', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: My Cart, tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties: {grid_position: 'OUWTBH,SLTMFK ASILEX,LNYVOQ'}
+    name: repeating_panel_1
+    properties: {background: '', border: '', foreground: '', item_template: Cart.ItemTemplate1, items: null, role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true}
+    type: RepeatingPanel
+  - layout_properties: {grid_position: 'OUWTBH,SLTMFK ASILEX,KDNCGX'}
+    name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+  - layout_properties: {grid_position: 'OUWTBH,YWQKWK KEUHWO,FQPGZS'}
+    name: label_2
+    properties: {align: left, background: '', bold: false, border: '', font: Yeseva One, font_size: 20, foreground: 'theme:Primary 700', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Order Summary, tooltip: '', underline: false, visible: true}
+    type: Label
+  - components:
+    - layout_properties: {grid_position: 'JROHWJ,EAARYA'}
+      name: label_3
+      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Subtotal: ', tooltip: '', underline: false, visible: true}
+      type: Label
+    - layout_properties: {grid_position: 'JROHWJ,AWLTQF'}
+      name: subtotal_label
+      properties: {align: right, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+      type: Label
+    - layout_properties: {grid_position: 'DWJVOH,ZLJDKC'}
+      name: label_4
+      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Shipping:', tooltip: '', underline: false, visible: true}
+      type: Label
+    - layout_properties: {grid_position: 'DWJVOH,KTOQXU'}
+      name: shipping_label
+      properties: {align: right, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+      type: Label
+    layout_properties: {grid_position: 'OUWTBH,YWQKWK VHVFFH,MWMWDS'}
+    name: column_panel_2
+    properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: top-bottom-border, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'OUWTBH,YWQKWK JLVSBC,OUMXAX'}
+    name: label_5
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 20, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Total:', tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties: {grid_position: 'OUWTBH,YWQKWK JLVSBC,SUCEVG'}
+    name: total_label
+    properties: {align: right, background: '', bold: false, border: '', font: '', font_size: 20, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  - event_bindings: {click: checkout_button_click}
+    layout_properties: {grid_position: 'OUWTBH,YWQKWK CNSFSL,QGZALB'}
+    name: checkout_button
+    properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: 'fa:lock', icon_align: left, italic: false, role: secondary-color, spacing_above: small, spacing_below: small, text: Checkout, tooltip: '', underline: false, visible: true}
+    type: Button
+  layout_properties: {full_width_row: true, grid_position: 'BXIKBZ,OWXGLM'}
+  name: column_panel_1
+  properties: {background: '', border: '', col_spacing: huge, col_widths: '{"SLTMFK":40,"YWQKWK":20,"LNYVOQ":55,"KDNCGX":5}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+  type: ColumnPanel
+- layout_properties: {grid_position: 'WYCQIH,ETSNVQ'}
+  name: spacer_3
+  properties: {height: 72}
+  type: Spacer
+container:
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+is_package: true
