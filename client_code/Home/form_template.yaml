@@ -10,7 +10,7 @@ components:
   - components:
     - layout_properties: {grid_position: 'QSMALK,LHZFKT'}
       name: label_1
-      properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: logo, spacing_above: small, spacing_below: small, text: Indecisive, tooltip: '', underline: false, visible: true}
+      properties: {align: center, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: true, role: logo, spacing_above: small, spacing_below: small, text: Indecisive, tooltip: '', underline: false, visible: true}
       type: Label
     - layout_properties: {grid_position: 'RSRZWR,HLARQT'}
       name: spacer_2
@@ -19,7 +19,7 @@ components:
     - event_bindings: {click: shop_button_click}
       layout_properties: {grid_position: 'YDORXK,XHDTQZ'}
       name: shop_button
-      properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: 16, foreground: '', icon: '', icon_align: left, italic: false, role: secondary-color, spacing_above: small, spacing_below: small, text: SHOP NOW, tooltip: '', underline: false, visible: true}
+      properties: {align: center, background: 'theme:White', bold: true, border: '', enabled: true, font: Calibri, font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: secondary-color, spacing_above: small, spacing_below: small, text: SHOP NOW, tooltip: '', underline: false, visible: true}
       type: Button
     layout_properties: {grid_position: 'LPHSOH,QWGJAR'}
     name: transparent_box_1
@@ -28,7 +28,20 @@ components:
   data_bindings: []
   layout_properties: {full_width_row: true, grid_position: 'OEYLMM,LPIWNK'}
   name: card_1
-  properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: bottom-photo, spacing_above: none, spacing_below: none, tooltip: '', visible: true, wrap_on: mobile}
+  properties:
+    background: theme:Black
+    border: ''
+    col_spacing: medium
+    col_widths: '{}'
+    foreground: ''
+    role: null
+    spacing:
+      padding: [0, 0, 0, null]
+    spacing_above: none
+    spacing_below: none
+    tooltip: ''
+    visible: true
+    wrap_on: mobile
   type: ColumnPanel
 - layout_properties: {grid_position: 'DPYZRD,CJDEMP'}
   name: spacer_3

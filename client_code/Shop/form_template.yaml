@@ -29,6 +29,7 @@ components:
   properties: {height: 49}
   type: Spacer
 - components: []
+  event_bindings: {show: flow_panel_1_show}
   layout_properties: {full_width_row: true, grid_position: 'VXNQSP,IHSNBX'}
   name: flow_panel_1
   properties: {align: justify, background: '', border: '', foreground: '', role: flow-flexer, spacing: medium, spacing_above: small, spacing_below: small, tooltip: '', visible: true}
