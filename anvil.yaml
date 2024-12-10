@@ -106,5 +106,5 @@ services:
 - client_config: {allow_signup: true, confirm_email: true, enable_automatically: true, use_email: true}
   server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
-startup: {module: Login, type: form}
+startup: {module: Main, type: form}
 startup_form: null
