@@ -71,10 +71,3 @@ class Main(MainTemplate):
       anvil.server.call('add_subscriber', email)
       self.subscribe_textbox.text = None
       Notification("Thanks for subscribing!").show()
-
-
-
-
-
-
-

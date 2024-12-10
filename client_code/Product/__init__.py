@@ -20,5 +20,3 @@ class Product(ProductTemplate):
     """This method is called when the button is clicked"""
     save_clicked = alert(content=AddToCart(item=self.item),
                          large=True)
-
-
