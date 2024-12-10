@@ -1,3 +1,4 @@
+import anvil.users
 import anvil.stripe
 import anvil.google.auth, anvil.google.drive, anvil.google.mail
 from anvil.google.drive import app_files
@@ -24,3 +25,8 @@ def add_subscriber(email):
 def add_order(charge_id, cart_items):
   app_tables.orders.add_row(charge_id=charge_id, order=cart_items)
   
+def get_reminders():
+  me = anvil.users.get_user()
+
+  if me:
+    return app_tables.reminders.client_writable (owner = me)

@@ -1,5 +1,7 @@
 unique_ids:
   assets:
+    ? DALL·E 2024-12-10 22.02.49 - A sleek and modern logo for a streetwear brand called 'Indecisive'. The design should feature bold typography with a mix of clean, sharp lines and sub.webp
+    : '1733848405513996913752935.1935'
     Logo .png: '1733116600271229714549824.86218'
     bottom.jpg: '1611695843308952578399478.217'
     cupcake_logo.png: '1612293957692351034368408.502'
@@ -15,6 +17,7 @@ unique_ids:
     Cart.ItemTemplate1: '1612280718297533513542641.99615'
     Contact: '1611865075741572459392420.5319'
     Home: '1611609328415376412638449.2594'
+    Login: '1733848769868979171402373.3353'
     Main: HCIUV6YM3C4RV3A5V7JFXGE32FXD6I3M
     Product: '1611676319873742908460703.3378'
     Shop: '1611693000888648472397414.5939'
