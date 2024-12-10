@@ -23,15 +23,15 @@ class Cart(CartTemplate):
     self.repeating_panel_1.items = self.items
     
     self.subtotal = sum(item['product']['price'] * item['quantity'] for item in self.items)
-    self.subtotal_label.text = f"${self.subtotal:.02f}"
+    self.subtotal_label.text = f"Rs{self.subtotal:.02f}"
     
-    if self.subtotal >= 35: #free shipping for orders over $35
+    if self.subtotal >= 3000: #free shipping for orders over $35
       self.shipping_label.text = 'FREE'     
     else: #add $5 shipping
-      self.shipping_label.text = "$5.00"
+      self.shipping_label.text = "Rs 199.00"
       self.subtotal = self.subtotal + 5
       
-    self.total_label.text = f"${self.subtotal:.02f}"
+    self.total_label.text = f"Rs{self.subtotal:.02f}"
       
 
   def shop_button_click(self, **event_args):

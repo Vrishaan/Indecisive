@@ -51,7 +51,8 @@ components:
   name: label_2
   properties: {align: center, background: '', bold: false, border: '', font: '', font_size: 28, foreground: 'theme:Primary 700', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: large, spacing_below: large, text: OUR BEST SELLERS, tooltip: '', underline: false, visible: true}
   type: Label
-- layout_properties: {full_width_row: true, grid_position: 'XQFGWK,FGXTSE'}
+- event_bindings: {show: flow_panel_1_show}
+  layout_properties: {full_width_row: true, grid_position: 'XQFGWK,FGXTSE'}
   name: flow_panel_1
   properties: {align: justify, background: '', border: '', foreground: '', role: flow-flexer, spacing: medium, spacing_above: small, spacing_below: small, tooltip: '', visible: true}
   type: FlowPanel

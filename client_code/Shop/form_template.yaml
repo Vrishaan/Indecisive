@@ -4,7 +4,7 @@ components:
     full_width_row: true
     grid_position: KJLXAR,AVKWJB
   name: banner
-  properties: {align: center, background: 'theme:Secondary 500', bold: false, border: '', font: '', font_size: 18, foreground: white, icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: none, spacing_below: none, text: FREE SHIPPING ON ALL ORDERS OVER $35, tooltip: '', underline: false, visible: true}
+  properties: {align: center, background: 'theme:Secondary 500', bold: false, border: '', font: '', font_size: 18, foreground: white, icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: none, spacing_below: none, text: FREE SHIPPING ON ALL ORDERS OVER Rs 3000, tooltip: '', underline: false, visible: true}
   type: Label
 - components:
   - components:
