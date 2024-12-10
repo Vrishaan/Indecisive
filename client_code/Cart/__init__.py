@@ -7,7 +7,6 @@ from anvil.google.drive import app_files
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-import stripe.checkout
 
 class Cart(CartTemplate):
   def __init__(self, items, **properties):
@@ -29,7 +28,7 @@ class Cart(CartTemplate):
       self.shipping_label.text = 'FREE'     
     else: #add $5 shipping
       self.shipping_label.text = "Rs 199.00"
-      self.subtotal = self.subtotal + 5
+      self.subtotal = self.subtotal + 199
       
     self.total_label.text = f"Rs{self.subtotal:.02f}"
       
@@ -44,7 +43,7 @@ class Cart(CartTemplate):
       self.order.append({'name':i['product']['name'], 'quantity':i['quantity']})
     try:
       charge = stripe.checkout.charge(amount=self.subtotal*100,
-                                      currency="USD",
+                                      currency="INR",
                                       shipping_address=True,
                                       title="Cupcakes & Co.",
                                       icon_url="_/theme/cupcake_logo.png")
