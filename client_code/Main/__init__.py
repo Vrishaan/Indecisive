@@ -60,7 +60,7 @@ class Main(MainTemplate):
     
   def contact_link_click(self, **event_args):
     """This method is called when the Link is shown on the screen"""
-    self.navigate(self.contact_link, Contact())
+    self.navigate (self.contact_link, Contact())
 
   def cart_link_click(self, **event_args):
     """This method is called when the link is clicked"""

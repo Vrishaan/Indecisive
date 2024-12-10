@@ -98,7 +98,7 @@ body {
   font-family: Nunito, Roboto, Noto, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4286;
-  background-color: %color:Neutral%;
+   background: white;
 /*   background-color: #fafafa; */
 }
 
@@ -413,7 +413,7 @@ a:hover, a:active {
   font-size: 20px;
   font-weight: 500;
   color: %color:Primary 700%;
-  background-color: %color:Neutral%;
+   background: white;
   
   z-index: 1;
   /* 4dp  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);   */
@@ -497,7 +497,7 @@ a:hover, a:active {
 }
 
 .app-bar a:hover, .app-bar a:active {
-  color: %color:Neutral% !important; 
+  color: %color:Gray 300% !important; 
   text-decoration: none;
   background-color: %color:Primary 700%;
 }
@@ -662,7 +662,7 @@ body>div[data-notify="container"].alert-warning>span[data-notify="title"]{
 
 .anvil-role-secondary-color > .btn:hover, .anvil-role-secondary-color > .btn:active, .anvil-role-secondary-color > .btn:focus {
   color: white;
-  background-color: %color:Secondary 700%;
+  background-color: %color:Primary 700%;
 }
 
 /* Component: Card */
