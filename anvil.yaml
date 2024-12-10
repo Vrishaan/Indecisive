@@ -58,7 +58,7 @@ db_schema:
     server: full
     title: Subscribers
 dependencies: []
-name: Clone of Shop Template (2)
+name: Indecisive
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Yeseva+One&display=swap" rel="stylesheet">'}
 package_name: Shop_Template
 renamed: true
