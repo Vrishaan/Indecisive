@@ -46,8 +46,7 @@ class Edit(EditTemplate):
       if product_row:
         product_row.delete()
         Notification(f"Product {self.item['name']} has been deleted.").show()
-        # Optionally, you can navigate to another form or refresh the current form
-        open_form('Edit')
+        open_form('Admin')
       else:
         Notification(f"Product {self.item['name']} not found in database.").show()
 

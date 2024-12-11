@@ -9,28 +9,40 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-# TODO: figure out why button in FlowPanel moves
-
-
+# This is the code for your form to call the server function when the button is clicked
 class AddProduct(AddProductTemplate):
-  def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-
   def add_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    if self.quantity_box.text:
-      get_open_form().add_to_cart(self.item, self.quantity_box.text)
-      self.quantity_box.text = ""
-      self.add_button.visible = False
-      self.added_button.visible = True
-      self.timer_1.interval = 1
-    else:
-      self.quantity_box.text = ""
-      Notification("Please specify a quantity").show()
+    # Get values from the form fields
+    name = self.text_box_1.text
+    description = self.text_box_2.text
+    price = float(self.text_box_3.text)  # Convert price to float
+    stock = int(self.quantity_box.text)  # Convert stock to int
+    is_best_seller = self.check_box_1.checked  # Checkbox value
 
-  def timer_1_tick(self, **event_args):
-    """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
-    self.add_button.visible = True
-    self.added_button.visible = False
-    self.timer_1.interval = 0
+    image = self.file_loader_1.file  # The image file uploaded by the user
+    self.image_1.source = self.file_loader_1.file
+    
+    # Call the server function to add the product to the database
+    anvil.server.call('add_product', name, description, price, stock, is_best_seller, image)
+
+    # Optionally, clear the fields after submission
+    self.text_box_1.text = ''
+    self.text_box_2.text = ''
+    self.text_box_3.text = ''
+    self.quantity_box.text = ''
+    self.check_box_1.checked = False
+    self.file_loader_1.clear()
+
+    # You can show a success message here
+    alert("Product added successfully!")
+    open_form('Admin')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Admin')
+    pass
+
+  def image_1_show(self, **event_args):
+    """This method is called when the Image is shown on the screen"""
+    pass
+

@@ -15,15 +15,13 @@ components:
   properties: {}
   type: ColumnPanel
 - components:
-  - layout_properties: {}
-    name: link_3
-    properties: {text: Home}
-    type: Link
-  - layout_properties: {}
+  - event_bindings: {click: link_2_click}
+    layout_properties: {}
     name: link_2
     properties: {text: Products}
     type: Link
-  - layout_properties: {}
+  - event_bindings: {click: link_1_click}
+    layout_properties: {}
     name: link_1
     properties: {text: Feedback}
     type: Link

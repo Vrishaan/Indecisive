@@ -28,3 +28,13 @@ class Admin(AdminTemplate):
     """This method is called when the button is clicked"""
     open_form('AddProduct')
     pass
+
+    def link_2_click(self, **event_args):
+      """This method is called when the link is clicked"""
+    self.navigate(self.link_2, Admin())
+    pass
+
+    def link_1_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      self.navigate(self.link_2, Admin())
+    pass
