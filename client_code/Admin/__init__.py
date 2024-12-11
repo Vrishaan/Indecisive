@@ -8,7 +8,7 @@ from anvil.google.drive import app_files
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..Product import Product
+from ..Admin_Products import Admin_Products
 
 class Admin(AdminTemplate):
   def __init__(self, **properties):
@@ -18,8 +18,13 @@ class Admin(AdminTemplate):
     
     products = app_tables.products.search()
     for p in products:
-      self.flow_panel_1.add_component(Product(item=p), width='30%')
+      self.flow_panel_1.add_component(Admin_Products(item=p), width='30%')
 
   def flow_panel_1_show(self, **event_args):
     """This method is called when the FlowPanel is shown on the screen"""
+    pass
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('AddProduct')
     pass

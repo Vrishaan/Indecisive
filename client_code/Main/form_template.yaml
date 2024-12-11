@@ -83,15 +83,17 @@ components:
     properties: {align: center, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: 'fa:twitter', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, url: 'https://twitter.com/anvil_works', visible: false, wrap_on: mobile}
     type: Link
   - event_bindings: {click: home_link_click}
+    layout_properties: {}
     name: home_link
-    properties: {align: left, background: 'theme:White', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: HOME, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: HOME, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - event_bindings: {click: shop_link_click}
     layout_properties: {}
     name: shop_link
-    properties: {align: left, background: 'theme:White', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: SHOP, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: SHOP, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - event_bindings: {click: contact_link_click}
+    layout_properties: {}
     name: contact_link
     properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: '', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: CONTACT, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
@@ -99,11 +101,11 @@ components:
     event_bindings: {click: about_link_click}
     layout_properties: {}
     name: about_link
-    properties: {align: left, background: 'theme:White', bold: false, border: '', col_spacing: medium, col_widths: '{}', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: ABOUT, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '{}', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: ABOUT, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - layout_properties: {}
     name: insta_link
-    properties: {align: center, background: 'theme:White', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: 'theme:Black', icon: 'fa:instagram', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, url: 'https://www.instagram.com/indecisiveclothingstore?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', visible: true, wrap_on: mobile}
+    properties: {align: center, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: 'theme:Black', icon: 'fa:instagram', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, url: 'https://www.instagram.com/indecisiveclothingstore?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', visible: true, wrap_on: mobile}
     type: Link
   - layout_properties: {width: 1}
     name: spacer_1
@@ -112,7 +114,7 @@ components:
   - event_bindings: {click: cart_link_click}
     layout_properties: {}
     name: cart_link
-    properties: {align: center, background: 'theme:White', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: 'fa:shopping-cart', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: VIEW CART, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    properties: {align: center, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: 'fa:shopping-cart', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: VIEW CART, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   layout_properties: {slot: nav-right}
   name: navbar_links

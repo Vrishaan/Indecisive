@@ -1,0 +1,69 @@
+components:
+- data_bindings:
+  - {code: 'self.item[''img'']', property: source}
+  layout_properties: {grid_position: 'XWJJFA,ZRPYWK'}
+  name: image_1
+  properties: {background: '', border: '', display_mode: zoom_to_fill, foreground: '', height: 570, horizontal_align: center, role: null, source: '', spacing_above: small, spacing_below: small, tooltip: '', vertical_align: center, visible: true}
+  type: Image
+- data_bindings:
+  - {code: 'self.item[''name'']', property: text}
+  layout_properties: {grid_position: 'XWJJFA,BTUFOG IBCGEX,JRGAVR'}
+  name: label_1
+  properties: {align: left, background: '', bold: false, border: '', font: Yeseva One, font_size: 20, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings:
+  - {code: 'f"{self.item[''stock'']} Remaining in Stock"', property: text, writeback: false}
+  event_bindings: {show: label_4_show}
+  layout_properties: {grid_position: 'XWJJFA,BTUFOG XKZWKC,EBVIPJ'}
+  name: stock_label
+  properties: {foreground: 'theme:Black'}
+  type: Label
+- data_bindings:
+  - {code: 'f"Rs{self.item[''price'']} each"', property: text, writeback: false}
+  layout_properties: {grid_position: 'XWJJFA,BTUFOG RRJTWE,LOGUOR'}
+  name: label_2
+  properties: {foreground: 'theme:Black'}
+  type: Label
+- layout_properties: {grid_position: 'XWJJFA,BTUFOG KOGHHJ,QQEXJV'}
+  name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+- layout_properties: {grid_position: 'XWJJFA,BTUFOG RZWTXS,CVDMMS'}
+  name: label_3
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Quantity:', tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'XWJJFA,BTUFOG ZCKYMK,DZPZWZ'}
+  name: quantity_box
+  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Black', hide_text: false, italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: number, underline: false, visible: true}
+  type: TextBox
+- layout_properties: {grid_position: 'XWJJFA,BTUFOG HMWXTO,KSGAJS'}
+  name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+- components:
+  - event_bindings: {click: add_button_click}
+    layout_properties: {grid_position: 'XWJJFA,BTUFOG HLJDJV,QCIANQ'}
+    name: add_button
+    properties: {align: full, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: secondary-color, spacing_above: small, spacing_below: small, text: Edit, tooltip: '', underline: false, visible: true}
+    type: Button
+  - layout_properties: {grid_position: 'XWJJFA,BTUFOG HLJDJV,HTXYRT'}
+    name: added_button
+    properties: {align: full, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: 'fa:check-circle-o', icon_align: left, italic: false, role: primary-color, spacing_above: small, spacing_below: small, text: Edited, tooltip: '', underline: false, visible: false}
+    type: Button
+  layout_properties: {grid_position: 'XWJJFA,BTUFOG HLJDJV,RQFKTC'}
+  name: flow_panel_1
+  properties: {align: center, background: '', border: '', foreground: '', role: null, spacing: medium, spacing_above: small, spacing_below: small, tooltip: '', visible: true}
+  type: FlowPanel
+- event_bindings: {click: delete_click}
+  layout_properties: {grid_position: 'XWJJFA,BTUFOG FNCPTY,HKCUXH'}
+  name: delete
+  properties: {background: '#e32400', foreground: 'theme:Black', text: Delete}
+  type: Button
+- event_bindings: {tick: timer_1_tick}
+  name: timer_1
+  properties: {interval: 0.5}
+  type: Timer
+container:
+  properties: {background: 'theme:White', col_spacing: medium, col_widths: '{}', foreground: 'theme:White', spacing_above: none, spacing_below: none}
+  type: ColumnPanel
+is_package: true
