@@ -66,10 +66,4 @@ class Main(MainTemplate):
     """This method is called when the link is clicked"""
     self.navigate(self.cart_link, Cart(items=self.cart_items))
 
-  def subscribe_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    email = self.subscribe_textbox.text
-    if email:
-      anvil.server.call('add_subscriber', email)
-      self.subscribe_textbox.text = None
-      Notification("Thanks for subscribing!").show()
+  

@@ -105,7 +105,7 @@ components:
     type: Link
   - layout_properties: {}
     name: insta_link
-    properties: {align: center, background: 'theme:White', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: 'theme:Black', icon: 'fa:instagram', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, url: 'https://www.instagram.com', visible: true, wrap_on: mobile}
+    properties: {align: center, background: 'theme:White', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: 'theme:Black', icon: 'fa:instagram', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, url: 'https://www.instagram.com/indecisiveclothingstore?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', visible: true, wrap_on: mobile}
     type: Link
   - layout_properties: {width: 1}
     name: spacer_1
