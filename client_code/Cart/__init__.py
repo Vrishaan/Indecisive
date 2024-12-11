@@ -46,7 +46,7 @@ class Cart(CartTemplate):
       charge = stripe.checkout.charge(amount=self.subtotal*100,
                                       currency="Rs",
                                       shipping_address=True,
-                                      title="Cupcakes & Co.",
+                                      title="Indecisive Clothing Store",
                                       icon_url="_/theme/cupcake_logo.png")
     except:
       return
