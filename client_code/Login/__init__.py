@@ -22,18 +22,19 @@ class Login(LoginTemplate):
       open_form('Main')
     else:
       open_form('Admin')
-      
-
-  
-  
-    
-
-
-  
-  
-        
-
     
     
-
-    # Any code you write here will run when the form opens.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   # Any code you write here will run when the form opens.
+    
