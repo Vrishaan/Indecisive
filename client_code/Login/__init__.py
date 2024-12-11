@@ -16,8 +16,13 @@ class Login(LoginTemplate):
     self.init_components(**properties)
     while not anvil.users.login_with_form():
       pass
-
-    open_form('Main')
+     
+    user= anvil.users.get_user()
+    if user['admin'] is False:
+      open_form('Main')
+    else:
+      open_form('About')
+      
 
   
   

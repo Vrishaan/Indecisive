@@ -81,7 +81,7 @@ db_schema:
       name: email_confirmation_key
       type: string
     - admin_ui: {order: 8, width: 200}
-      name: Admin
+      name: admin
       type: bool
     server: full
     title: Users
