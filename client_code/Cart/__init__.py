@@ -44,7 +44,7 @@ class Cart(CartTemplate):
       self.order.append({'name':i['product']['name'], 'quantity':i['quantity']})
     try:
       charge = stripe.checkout.charge(amount=self.subtotal*100,
-                                      currency="INR",
+                                      currency="Rs",
                                       shipping_address=True,
                                       title="Cupcakes & Co.",
                                       icon_url="_/theme/cupcake_logo.png")
