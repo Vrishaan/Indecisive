@@ -1,4 +1,4 @@
-Adminfrom ._anvil_designer import Form1Template
+from ._anvil_designer import AdminTemplate
 from anvil import *
 import anvil.server
 import anvil.users
@@ -8,11 +8,18 @@ from anvil.google.drive import app_files
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ..Product import Product
 
-
-class Form1(Form1Template):
+class Admin(AdminTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    
+    
+    products = app_tables.products.search()
+    for p in products:
+      self.flow_panel_1.add_component(Product(item=p), width='30%')
 
-    # Any code you write here will run when the form opens.
+  def flow_panel_1_show(self, **event_args):
+    """This method is called when the FlowPanel is shown on the screen"""
+    pass

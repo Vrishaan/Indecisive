@@ -76,32 +76,30 @@ components:
     type: ColumnPanel
   layout_properties: {slot: default}
   name: content_panel
-  properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: max-width, spacing_above: none, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+  properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: max-width, spacing_above: none, spacing_below: none, tooltip: '', visible: true, wrap_on: mobile}
   type: ColumnPanel
 - components:
   - name: link_1
     properties: {align: center, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: 'fa:twitter', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, url: 'https://twitter.com/anvil_works', visible: false, wrap_on: mobile}
+    type: Link
+  - event_bindings: {click: home_link_click}
+    name: home_link
+    properties: {align: left, background: 'theme:White', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: HOME, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - event_bindings: {click: shop_link_click}
     layout_properties: {}
     name: shop_link
     properties: {align: left, background: 'theme:White', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: SHOP, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
-  - event_bindings: {click: home_link_click}
-    layout_properties: {grid_position: 'WHTCAA,QBPJCU'}
-    name: home_link
-    properties: {align: left, background: 'theme:White', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: HOME, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+  - event_bindings: {click: contact_link_click}
+    name: contact_link
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: '', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: CONTACT, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - components: []
     event_bindings: {click: about_link_click}
     layout_properties: {}
     name: about_link
     properties: {align: left, background: 'theme:White', bold: false, border: '', col_spacing: medium, col_widths: '{}', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: ABOUT, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
-    type: Link
-  - event_bindings: {click: contact_link_click}
-    layout_properties: {}
-    name: contact_link
-    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: '', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: CONTACT, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - layout_properties: {}
     name: insta_link

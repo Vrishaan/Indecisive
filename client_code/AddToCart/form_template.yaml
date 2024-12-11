@@ -9,13 +9,20 @@ components:
   - {code: 'self.item[''name'']', property: text}
   layout_properties: {grid_position: 'XWJJFA,BTUFOG IBCGEX,JRGAVR'}
   name: label_1
-  properties: {align: left, background: '', bold: false, border: '', font: Yeseva One, font_size: 20, foreground: 'theme:Primary 700', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  properties: {align: left, background: '', bold: false, border: '', font: Yeseva One, font_size: 20, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings:
+  - {code: 'f"{self.item[''Stock'']} Remaining in Stock"', property: text, writeback: false}
+  event_bindings: {}
+  layout_properties: {grid_position: 'XWJJFA,BTUFOG XKZWKC,EBVIPJ'}
+  name: label_4
+  properties: {foreground: 'theme:Black'}
   type: Label
 - data_bindings:
   - {code: 'f"Rs{self.item[''price'']} each"', property: text, writeback: false}
   layout_properties: {grid_position: 'XWJJFA,BTUFOG RRJTWE,LOGUOR'}
   name: label_2
-  properties: {}
+  properties: {foreground: 'theme:Black'}
   type: Label
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG KOGHHJ,QQEXJV'}
   name: spacer_1
@@ -23,11 +30,11 @@ components:
   type: Spacer
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG RZWTXS,CVDMMS'}
   name: label_3
-  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Quantity:', tooltip: '', underline: false, visible: true}
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Quantity:', tooltip: '', underline: false, visible: true}
   type: Label
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG ZCKYMK,DZPZWZ'}
   name: quantity_box
-  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: number, underline: false, visible: true}
+  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Black', hide_text: false, italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: number, underline: false, visible: true}
   type: TextBox
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG HMWXTO,KSGAJS'}
   name: spacer_2
@@ -52,6 +59,6 @@ components:
   properties: {interval: 0.5}
   type: Timer
 container:
-  properties: {col_widths: '{}'}
+  properties: {background: 'theme:White', col_spacing: medium, col_widths: '{}', foreground: 'theme:White', spacing_above: none, spacing_below: none}
   type: ColumnPanel
 is_package: true

@@ -2,7 +2,7 @@ components:
 - components:
   - layout_properties: {grid_position: 'JPOURI,RFTNMJ'}
     name: empty_cart_label
-    properties: {align: center, background: '', bold: false, border: '', font: '', font_size: 16, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Looks like there's nothing in your cart right now., tooltip: '', underline: false, visible: true}
+    properties: {align: center, background: '', bold: false, border: '', font: '', font_size: 16, foreground: 'theme:White', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Looks like there's nothing in your cart right now., tooltip: '', underline: false, visible: true}
     type: Label
   - event_bindings: {click: shop_button_click}
     layout_properties: {grid_position: 'HQMVFH,CGYRIM'}

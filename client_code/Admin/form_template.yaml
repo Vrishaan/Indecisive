@@ -1,0 +1,36 @@
+components:
+- components:
+  - event_bindings: {show: flow_panel_1_show}
+    layout_properties: {full_width_row: true, grid_position: 'EQGGAC,MMVUSC'}
+    name: flow_panel_1
+    properties: {align: center, role: flow-flexer, spacing_above: small, spacing_below: small}
+    type: FlowPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- components:
+  - layout_properties: {}
+    name: link_3
+    properties: {text: Home}
+    type: Link
+  - layout_properties: {}
+    name: link_2
+    properties: {text: Products}
+    type: Link
+  - layout_properties: {}
+    name: link_1
+    properties: {text: Feedback}
+    type: Link
+  - layout_properties: {}
+    name: link_4
+    properties: {text: Orders}
+    type: Link
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {background: 'theme:Black', html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true
