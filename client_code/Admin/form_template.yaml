@@ -15,12 +15,12 @@ components:
   properties: {}
   type: ColumnPanel
 - components:
-  - event_bindings: {click: link_2_click}
+  - event_bindings: {}
     layout_properties: {}
     name: link_2
     properties: {text: Products}
     type: Link
-  - event_bindings: {click: link_1_click}
+  - event_bindings: {}
     layout_properties: {}
     name: link_1
     properties: {text: Feedback}

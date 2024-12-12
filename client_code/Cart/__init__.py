@@ -57,6 +57,3 @@ class Cart(CartTemplate):
     get_open_form().cart_link_click()
     Notification("Your order has been received!").show()
 
-
-  
-
