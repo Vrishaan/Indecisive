@@ -12,29 +12,16 @@ from ..Home import Home
      
 class Login(LoginTemplate):
   def __init__(self, **properties):
-    
-    self.init_components(**properties)
-    while not anvil.users.login_with_form():
-      pass
+    self.init_components()
+   
+
+  def button_1_click(self, **event_args):
+    anvil.users.login_with_form()
      
     user= anvil.users.get_user()
     if user['admin'] is False:
       open_form('Main')
     else:
       open_form('Admin')
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   # Any code you write here will run when the form opens.
+    pass
     
