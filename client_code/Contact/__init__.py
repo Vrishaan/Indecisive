@@ -10,6 +10,24 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class Contact(ContactTemplate):
+  def __init__(self, **properties):
+    self.init_components(**properties)
+    self.map_1.center = GoogleMap.LatLng(19.00493908512311, 72.82994174280753)
+    self.map_1.zoom = 15
+    icon = GoogleMap.Icon(url="_/theme/maps-icon.png")
+    self.marker = GoogleMap.Marker(animation=GoogleMap.Animation.DROP, 
+                              position=GoogleMap.LatLng(19.00493908512311, 72.82994174280753),
+                              icon = icon)
+    self.map_1.add_component(self.marker)
+    
+    def marker_click(sender, **event_args):
+      i =GoogleMap.InfoWindow(content=Label(text="Indecisive Clothing Store", 
+                                            bold=True, 
+                                            foreground="theme:Primary 700"))
+      i.open(self.map_1, sender)
+
+    self.marker.set_event_handler("click", marker_click)
+
   def send_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     name = self.name_box.text

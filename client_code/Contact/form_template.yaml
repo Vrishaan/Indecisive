@@ -30,16 +30,25 @@ components:
       margin: [0, 0, 0, 0]
       placeholder: Type your message here...
       role: null
-      spacing_above: none
-      spacing_below: none
+      spacing_above: small
+      spacing_below: small
       text: ''
       tooltip: ''
       underline: false
       visible: true
     type: TextArea
+  - event_bindings: {bounds_changed: map_1_bounds_changed}
+    layout_properties: {grid_position: 'TJVZMT,KQLMNL'}
+    name: map_1
+    properties:
+      height: '300'
+      margin: [0, 0, 0, 0]
+      spacing_above: small
+      spacing_below: small
+    type: GoogleMap
   layout_properties: {grid_position: 'IWOPPM,FUODEC'}
   name: column_panel_1
-  properties: {background: 'theme:Neutral', border: '', col_spacing: medium, col_widths: '{"RAFOPF":30}', foreground: 'theme:Primary 700', role: null, spacing_above: none, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+  properties: {background: 'theme:Neutral', border: '', col_spacing: medium, col_widths: '{}', foreground: 'theme:Primary 700', role: null, spacing_above: none, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
   type: ColumnPanel
 - layout_properties: {grid_position: 'IWOPPM,WHTFDD'}
   name: spacer_2
