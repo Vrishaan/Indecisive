@@ -18,5 +18,3 @@ class ItemTemplate1(ItemTemplate1Template):
     """This method is called when the button is clicked"""
     get_open_form().cart_items.remove(self.item)
     get_open_form().cart_link_click()
-
-

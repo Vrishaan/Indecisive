@@ -29,14 +29,14 @@ class Main(MainTemplate):
     for link in [self.home_link, self.shop_link, self.about_link, self.contact_link, self.insta_link, self.link_1, self.cart_link]:
       link.role = ['spaced-title', 'display-none-responsive']
     
-  def add_to_cart(self, product, quantity):
+  def add_to_cart(self, product, quantity, size):
     #if item is already in cart, just update the quantity
     for i in self.cart_items:
       if i['product'] == product:
         i['quantity'] += quantity
         break
     else:
-      self.cart_items.append({'product': product, 'quantity': quantity})
+      self.cart_items.append({'product': product, 'quantity': quantity, 'size': size})
     
   def navigate(self, active_link, form):
     for i in [self.home_link, self.shop_link, self.about_link, self.contact_link, self.cart_link]:
