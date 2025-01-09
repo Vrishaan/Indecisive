@@ -916,3 +916,16 @@ https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-m
   padding-left: 12px;
   padding-right: 12px;
 }
+
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    z-index: 1000; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white; 
+    overflow: hidden;
+}

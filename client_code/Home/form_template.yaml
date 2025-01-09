@@ -60,6 +60,16 @@ components:
   name: spacer_4
   properties: {height: 71}
   type: Spacer
+- components:
+  - data_bindings: []
+    layout_properties: {width: 300, x: 783.09375, y: 97}
+    name: form1_1
+    properties: {}
+    type: form:Form1
+  layout_properties: {full_width_row: true, grid_position: 'EGAGHI,IKVTQI'}
+  name: xy_panel_1
+  properties: {height: 100}
+  type: XYPanel
 container:
   properties: {background: 'theme:Black', col_widths: '{}'}
   type: ColumnPanel
