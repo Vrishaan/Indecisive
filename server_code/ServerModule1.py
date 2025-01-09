@@ -12,8 +12,6 @@ import anvil.email
 import anvil.server
 import anvil.google.auth
 
-
-
 @anvil.server.callable
 def add_message(name, email, message):
   app_tables.contact.add_row(name=name, email=email, message=message, date=datetime.now())

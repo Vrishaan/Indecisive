@@ -60,20 +60,6 @@ components:
   name: spacer_4
   properties: {height: 71}
   type: Spacer
-- components:
-  - layout_properties: {width: 200, x: 889, y: 0}
-    name: chatbot_1
-    properties: {}
-    type: form:Chatbot
-  - event_bindings: {click: button_1_click}
-    layout_properties: {width: 200, x: 687.09375, y: 156}
-    name: button_1
-    properties: {role: secondary-color, text: button_1}
-    type: Button
-  layout_properties: {full_width_row: true, grid_position: 'EGAGHI,IKVTQI'}
-  name: xy_panel_1
-  properties: {height: 192}
-  type: XYPanel
 container:
   properties: {background: 'theme:Black', col_widths: '{}'}
   type: ColumnPanel

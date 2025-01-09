@@ -94,7 +94,11 @@ name: Indecisive
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Yeseva+One&display=swap" rel="stylesheet">'}
 package_name: Shop_Template
 renamed: true
-runtime_options: {client_version: '3', server_spec: null, server_version: python3-sandbox, version: 2}
+runtime_options:
+  client_version: '3'
+  server_spec: {base: python310-minimal}
+  server_version: python3-sandbox
+  version: 2
 services:
 - client_config: {}
   server_config: {}
