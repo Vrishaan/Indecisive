@@ -36,3 +36,8 @@ class Home(HomeTemplate):
   def shop_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     get_open_form().shop_link_click()
+
+  def button_1_click(self, **event_args):
+    self.chatbox_1.visible = not self.chatbox_1.visible  # 'chat_panel' is your chat UI container
+    self.toggle_button.text = "Chat" if not self.chatbox_1.visible else "Close"
+    pass
