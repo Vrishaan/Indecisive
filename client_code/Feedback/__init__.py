@@ -15,4 +15,8 @@ class Feedback(FeedbackTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run when the form opens.
+    # Any code you write here will run before the form opens.
+
+  def flow_panel_1_show(self, **event_args):
+    """This method is called when the FlowPanel is shown on the screen"""
+    pass

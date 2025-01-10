@@ -1,13 +1,8 @@
 components:
-- layout_properties: {slot: default}
-  name: content_panel
-  properties: {}
-  type: ColumnPanel
-- layout_properties: {slot: nav-right}
-  name: navbar_links
-  properties: {}
+- event_bindings: {show: flow_panel_1_show}
+  layout_properties: {full_width_row: true, grid_position: 'THQFXN,YEGGQH'}
+  name: flow_panel_1
+  properties: {align: center, role: flow-flexer, spacing_above: small, spacing_below: small}
   type: FlowPanel
-container:
-  properties: {background: 'theme:Black', html: '@theme:standard-page.html'}
-  type: HtmlTemplate
+container: {type: ColumnPanel}
 is_package: true

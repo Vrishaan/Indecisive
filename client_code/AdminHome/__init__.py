@@ -1,20 +1,20 @@
-from ._anvil_designer import ShopTemplate
+from ._anvil_designer import AdminHomeTemplate
 from anvil import *
+import anvil.server
 import anvil.users
 import stripe.checkout
-import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..Product import Product
-class Shop(ShopTemplate):
+from ..Admin_Products import Admin_Products
+from ..AddProduct import AddProduct
+
+class AdminHome(AdminHomeTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    
-    self.banner.role = ['spaced-title', 'left-right-padding']
     
     # Load all products from the database
     self.all_products = list(app_tables.products.search())
@@ -29,15 +29,20 @@ class Shop(ShopTemplate):
     if products:
       # Add each product as a component to the FlowPanel
       for p in products:
-        self.flow_panel_1.add_component(Product(item=p), width='30%')
+        self.flow_panel_1.add_component(Admin_Products(item=p), width='30%')
     else:
       # Display a message if no products match the search query
       self.flow_panel_1.add_component(
           Label(text="No products found.", align="center", role="headline")
       )
 
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('AddProduct')
+    pass
+
   def search_box_pressed_enter(self, **event_args):
-    """Called when the user presses Enter in the search box"""
+    """This method is called when the user presses Enter in the search box"""
     search_query = self.search_box.text.lower()  # Get the search query in lowercase
     
     # Filter products by name or description
@@ -53,5 +58,6 @@ class Shop(ShopTemplate):
     self.search_box.text = ""
 
   def shop_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
     self.display_products(self.all_products)
     pass

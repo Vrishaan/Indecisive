@@ -45,7 +45,7 @@ def add_order(charge_id, cart_items):
 
 # This is the server-side function to handle the database update
 @anvil.server.callable
-def add_product(name, description, price, stock, is_best_seller, image):
+def add_product(name, description, price, stock, is_best_seller, image, small, medium, large):
     # Store the image in the "media" table and get the media URL
     image_media = anvil.BlobMedia(image.content_type, image.get_bytes())
 
@@ -54,9 +54,23 @@ def add_product(name, description, price, stock, is_best_seller, image):
         name=name,
         description=description,
         price=price,
-        stock=stock,
         best_seller=is_best_seller,
         img=image_media
+    )
+    app_tables.size.add_row(
+      name=name,
+      stock= small,
+      size= 'S'
+    )
+    app_tables.size.add_row(
+      name=name,
+      stock= medium,
+      size= 'M'
+    )
+    app_tables.size.add_row(
+      name=name,
+      stock= large,
+      size= 'L'
     )
 
 @anvil.server.callable

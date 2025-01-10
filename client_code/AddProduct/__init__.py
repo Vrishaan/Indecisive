@@ -15,15 +15,31 @@ class AddProduct(AddProductTemplate):
     # Get values from the form fields
     name = self.text_box_1.text
     description = self.text_box_2.text
-    price = float(self.text_box_3.text)  # Convert price to float
-    stock = int(self.quantity_box.text)  # Convert stock to int
-    is_best_seller = self.check_box_1.checked  # Checkbox value
+    price_text = self.text_box_3.text
+    stock_text = self.quantity_box.text
+    small = self.quantity_box.text
+    medium = self.quantity_box_copy.text
+    large = self.quantity_box_copy_2.text
 
+    # Check if any required field is empty
+    if not name or not description or not price_text or not stock_text or not small or not medium or not large or not self.file_loader_1.file:
+        alert("Please fill in all the fields.")
+        return  # Stop the function if any field is empty
+
+    # Convert price and stock values after ensuring they are not empty
+    try:
+        price = float(price_text)  # Convert price to float
+        stock = int(stock_text)  # Convert stock to int
+    except ValueError:
+        alert("Please enter valid numbers for price and stock.")
+        return
+
+    is_best_seller = self.check_box_1.checked  # Checkbox value
     image = self.file_loader_1.file  # The image file uploaded by the user
     self.image_1.source = self.file_loader_1.file
-    
+
     # Call the server function to add the product to the database
-    anvil.server.call('add_product', name, description, price, stock, is_best_seller, image)
+    anvil.server.call('add_product', name, description, price, stock, is_best_seller, image, small, medium, large)
 
     # Optionally, clear the fields after submission
     self.text_box_1.text = ''
@@ -42,7 +58,11 @@ class AddProduct(AddProductTemplate):
     open_form('Admin')
     pass
 
-  def image_1_show(self, **event_args):
-    """This method is called when the Image is shown on the screen"""
-    pass
+  # Assuming `file_loader_1` is your FileLoader and `image_1` is the Image component
 
+  def file_loader_1_change(self, file, **event_args):
+    # Check if a file is uploaded
+    if file:
+        # Set the image_1 source to the uploaded file
+        self.image_1.source = file
+        # Optionally, you can add some extra behavior when the image is shown, like enabling or resizing components
