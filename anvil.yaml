@@ -24,13 +24,18 @@ db_schema:
     - admin_ui: {width: 200}
       name: charge_id
       type: string
-    - admin_ui: {width: 200}
-      name: order
+    - admin_ui: {order: 1, width: 200}
+      name: name
       type: simpleObject
-    - admin_ui: {order: 2, width: 200}
-      name: 'Customer '
-      target: users
-      type: link_single
+    - admin_ui: {order: 3, width: 200}
+      name: quantity
+      type: number
+    - admin_ui: {order: 4, width: 200}
+      name: size
+      type: string
+    - admin_ui: {width: 200}
+      name: email
+      type: string
     server: full
     title: Orders
   products:
@@ -54,7 +59,7 @@ db_schema:
     server: full
     title: Products
   size:
-    client: search
+    client: full
     columns:
     - admin_ui: {order: 1, width: 200}
       name: size
@@ -115,10 +120,10 @@ services:
   server_config: {}
   source: /runtime/services/tables.yml
 - client_config: {}
-  server_config: {}
+  server_config: {enc_delegation_refresh_token: 5dZd5hOuDiDHMAn0j8K4VWL9MJC6XetZwdW1h/sfFSZHAQgci5yCafoW3n3qTHCWogLoOZi+IsjgeXDBxxb5MBiNmiUHhl7I3L1oRJaM/y5+D1zojTIryKRAl+EfFQCjMFwYJ8GACLSZPDf6C7Dn9hNfdQgksdBtd/FKclz5g+oztdJehTPoPdO7jbqPJ4k+xmicE/vzIAgaIWBu8s8epIgvKfGaEMFjm6LJRQWuybOrVBzg8eMy/O6lIWExNcMbqnjmdeHAu0pVvPBBGupFkMZzxev7dvMcqFGma+SjkI7U5J3jpLm/TQcCREKP}
   source: /runtime/services/google.yml
 - client_config: {}
-  server_config: {}
+  server_config: {refresh_token: rt_RYfr7gXScXkupuH8QrSYS1r8IeUIF1QsYbWjk5wVuxCr2v0k, stripe_user_id: acct_1QfRLA03WCqa62em}
   source: /runtime/services/stripe.yml
 - client_config: {allow_signup: true, confirm_email: true, enable_automatically: true, use_email: true, use_google: false}
   server_config: {user_table: users}
