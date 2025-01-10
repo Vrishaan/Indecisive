@@ -8,6 +8,7 @@ from anvil.google.drive import app_files
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ..Chart import Chart
 
 class AddToCart(AddToCartTemplate):
     def __init__(self, **properties):
@@ -77,3 +78,8 @@ class AddToCart(AddToCartTemplate):
         # Reset the quantity dropdown when size changes
         self.drop_down_1.selected_value = None  # Explicitly reset to None (blank)
         self.drop_down_1_show()  # Update the available quantity based on the selected size
+
+    def primary_color_1_click(self, **event_args):
+        """This method is called when the button is clicked."""
+        # Open the Chart form modally
+        alert(content=Chart(), large=True, buttons=[])
