@@ -18,4 +18,4 @@ class Chart(ChartTemplate):
     def primary_color_1_click(self, **event_args):
         """This method is called when the close button is clicked."""
         # Close the modal alert
-        close_alert()
+        self.raise_event("x-close-alert")
