@@ -55,3 +55,4 @@ class Shop(ShopTemplate):
   def shop_button_click(self, **event_args):
     self.display_products(self.all_products)
     pass
+

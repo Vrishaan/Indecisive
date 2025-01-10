@@ -14,7 +14,6 @@ from ..Contact import Contact
 from ..About import About
 from ..Cart import Cart
 
-
 class Main(MainTemplate):
   
   def __init__(self, **properties):
@@ -65,5 +64,3 @@ class Main(MainTemplate):
   def cart_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.navigate(self.cart_link, Cart(items=self.cart_items))
-
-  

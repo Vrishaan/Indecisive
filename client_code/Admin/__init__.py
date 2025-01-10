@@ -20,9 +20,12 @@ class Admin(AdminTemplate):
     for p in products:
       self.flow_panel_1.add_component(Admin_Products(item=p), width='30%')
 
-  def flow_panel_1_show(self, **event_args):
-    """This method is called when the FlowPanel is shown on the screen"""
-    pass
+  def navigate(self, active_link, form):
+    for i in [self.home_link, self.shop_link, self.about_link, self.contact_link, self.cart_link]:
+      i.foreground = 'theme:Primary 700'
+    active_link.foreground = 'theme:Secondary 500'
+    self.column_panel_1.clear()
+    self.column_panel_1.add_component(form, full_width_row=True)
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
