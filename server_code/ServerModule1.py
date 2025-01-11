@@ -13,10 +13,19 @@ import anvil.email
 
 @anvil.server.callable
 def add_message(name, email, message):
-  app_tables.contact.add_row(name=name, email=email, message=message, date=datetime.now())
-  anvil.email.send(from_name="Contact Form", 
-                   subject="New Web Contact",
-                   text=f"New web contact from {name} ({email})\nMessage: {message}")
+    app_tables.contact.add_row(
+        name=name, 
+        email=email, 
+        message=message, 
+        date=datetime.now().date(),  # Corrected date handling
+        seen=False  # Explicitly set the boolean field
+    )
+    anvil.email.send(
+        from_name="Contact Form", 
+        subject="New Web Contact",
+        text=f"New web contact from {name} ({email})\nMessage: {message}"
+    )
+
   
 @anvil.server.callable
 def add_subscriber(email):
@@ -33,7 +42,7 @@ def add_order(charge_id, cart_items):
         name = item.get('name')  # Name of the product
         quantity = item.get('quantity')  # Quantity of the product
         size = item.get('size')  # Size of the product (ensure size is passed in cart_items)
-        date = datetime.date.today()
+        date = datetime.now().date()
 
         # Add a new row to the "orders" DataTable
         app_tables.orders.add_row(
@@ -42,7 +51,8 @@ def add_order(charge_id, cart_items):
             name=name,
             quantity=quantity,
             size=size,
-            date=date
+            date=date,
+            seen=False
         )
 
 # This is the server-side function to handle the database update

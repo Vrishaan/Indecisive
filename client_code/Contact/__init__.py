@@ -52,7 +52,8 @@ class Contact(ContactTemplate):
           email=email,
           about=about,
           message=message,
-          date=datetime.now()
+          date=datetime.now().date(),
+          seen=False
         )
 
         # Clear form fields
