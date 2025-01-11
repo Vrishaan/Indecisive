@@ -28,7 +28,13 @@ components:
   event_bindings: {change: check_box_1_change}
   layout_properties: {full_width_row: true, grid_position: 'SKGMXB,NJLHEO'}
   name: check_box_1
-  properties: {align: center, background: 'theme:Black', foreground: 'theme:White', text: ''}
+  properties:
+    align: center
+    background: theme:Black
+    foreground: theme:White
+    spacing:
+      padding: [null, null, null, '40']
+    text: ''
   type: CheckBox
 container:
   properties: {col_widths: '{}'}

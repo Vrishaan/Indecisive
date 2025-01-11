@@ -70,6 +70,6 @@ components:
   properties: {item_template: Admin_Orders.ItemTemplate2_copy}
   type: RepeatingPanel
 container:
-  properties: {col_widths: '{"XHGPYT":60,"HJYPCI":10,"IPKVNV":10}'}
+  properties: {col_widths: '{"XHGPYT":60,"HJYPCI":10,"IPKVNV":10,"QSQQSG":15,"DBCFMO":10,"WIFRIH":10,"LLPMNR":10,"SKLCLL":10,"HHKOJS":5}'}
   type: ColumnPanel
 is_package: true
