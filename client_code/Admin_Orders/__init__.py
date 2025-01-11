@@ -61,26 +61,26 @@ class Admin_Orders(Admin_OrdersTemplate):
         self.drop_down_1.selected_value = "All"
 
     def drop_down_1_change(self, **event_args):
-        """This method is called when an item is selected in the dropdown."""
-        # Get the selected value from the dropdown
-        selected_value = self.drop_down_1.selected_value
+     """This method is called when an item is selected in the dropdown."""
+    # Get the selected value from the dropdown
+     selected_value = self.drop_down_1.selected_value
 
-        if selected_value == "All":
-            # Show all orders
-            filtered_orders = self.all_orders
-        elif selected_value == "Unseen":
-            # Show orders where 'seen' is False (if 'seen' column exists in 'orders' table)
-            filtered_orders = [
-                order for order in self.all_orders if not order.get("seen", False)
-            ]
-        elif selected_value == "Seen":
-            # Show orders where 'seen' is True (if 'seen' column exists in 'orders' table)
-            filtered_orders = [
-                order for order in self.all_orders if order.get("seen", False)
-            ]
-        else:
-            # If no valid option is selected, show no orders
-            filtered_orders = []
+     if selected_value == "All":
+        # Show all orders
+        filtered_orders = self.all_orders
+     elif selected_value == "Unseen":
+        # Show orders where 'seen' is False, ensure the column exists
+        filtered_orders = [
+            order for order in self.all_orders if not getattr(order, 'seen', False)  # Using getattr as fallback
+        ]
+     elif selected_value == "Seen":
+        # Show orders where 'seen' is True, ensure the column exists
+        filtered_orders = [
+            order for order in self.all_orders if getattr(order, 'seen', False)  # Using getattr as fallback
+        ]
+     else:
+        # If no valid option is selected, show no orders
+        filtered_orders = []
 
-        # Display the filtered orders
-        self.display_products(filtered_orders)
+    # Display the filtered orders
+     self.display_products(filtered_orders)
