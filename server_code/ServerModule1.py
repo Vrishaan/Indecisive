@@ -33,6 +33,7 @@ def add_order(charge_id, cart_items):
         name = item.get('name')  # Name of the product
         quantity = item.get('quantity')  # Quantity of the product
         size = item.get('size')  # Size of the product (ensure size is passed in cart_items)
+        date = datetime.date.today()
 
         # Add a new row to the "orders" DataTable
         app_tables.orders.add_row(
@@ -40,7 +41,8 @@ def add_order(charge_id, cart_items):
             email=user_email,
             name=name,
             quantity=quantity,
-            size=size
+            size=size,
+            date=date
         )
 
 # This is the server-side function to handle the database update

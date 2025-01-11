@@ -66,20 +66,16 @@ class Admin_Orders(Admin_OrdersTemplate):
      selected_value = self.drop_down_1.selected_value
 
      if selected_value == "All":
-        # Show all orders
+        # Show all feedback
         filtered_orders = self.all_orders
      elif selected_value == "Unseen":
-        # Show orders where 'seen' is False, ensure the column exists
-        filtered_orders = [
-            order for order in self.all_orders if not getattr(order, 'seen', False)  # Using getattr as fallback
-        ]
+        # Show feedback with the 'seen' attribute set to False
+        filtered_orders = [order for order in self.all_orders if not order['seen']]
      elif selected_value == "Seen":
-        # Show orders where 'seen' is True, ensure the column exists
-        filtered_orders = [
-            order for order in self.all_orders if getattr(order, 'seen', False)  # Using getattr as fallback
-        ]
+        # Show feedback with the 'seen' attribute set to True
+        filtered_orders = [order for order in self.all_orders if order['seen']]
      else:
-        # If no valid option is selected, show no orders
+        # If no valid option is selected, show no feedback
         filtered_orders = []
 
     # Display the filtered orders
