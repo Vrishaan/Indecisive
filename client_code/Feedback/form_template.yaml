@@ -37,6 +37,34 @@ components:
     underline: false
     visible: true
   type: Button
+- layout_properties: {full_width_row: true, grid_position: 'KLITIM,EHGONY'}
+  name: label_5
+  properties: {align: center, foreground: 'theme:White', text: Email}
+  type: Label
+- layout_properties: {grid_position: 'KLITIM,DJVXRG'}
+  name: label_6
+  properties: {align: center, foreground: 'theme:White', text: About}
+  type: Label
+- layout_properties: {grid_position: 'KLITIM,TRIRZB'}
+  name: label_7
+  properties:
+    align: center
+    foreground: theme:White
+    text: |
+      Feedback
+  type: Label
+- layout_properties: {grid_position: 'KLITIM,DIJPOC'}
+  name: label_8
+  properties:
+    align: center
+    foreground: theme:White
+    text: |
+      Date
+  type: Label
+- layout_properties: {grid_position: 'KLITIM,INSMVC'}
+  name: label_9
+  properties: {align: center, foreground: 'theme:White', text: Seen}
+  type: Label
 - layout_properties: {full_width_row: true, grid_position: 'WCODBO,KVSHZF'}
   name: repeating_panel_1
   properties: {item_template: Feedback.ItemTemplate2}

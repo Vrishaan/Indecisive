@@ -22,7 +22,7 @@ db_schema:
     server: full
     title: Feedback
   orders:
-    client: none
+    client: full
     columns:
     - admin_ui: {width: 200}
       name: charge_id
@@ -39,6 +39,9 @@ db_schema:
     - admin_ui: {order: 1.25, width: 200}
       name: name
       type: string
+    - admin_ui: {order: 4, width: 200}
+      name: seen
+      type: bool
     server: full
     title: Orders
   products:
