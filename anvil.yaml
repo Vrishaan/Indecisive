@@ -16,6 +16,9 @@ db_schema:
     - admin_ui: {order: 1.5, width: 200}
       name: about
       type: string
+    - admin_ui: {order: 4, width: 200}
+      name: seen
+      type: bool
     server: full
     title: Feedback
   orders:
