@@ -67,16 +67,17 @@ class Feedback(FeedbackTemplate):
         # Show all feedback
         filtered_feedback = self.all_feedback
      elif selected_value == "Unseen":
-        # Show feedback with the checkbox unchecked (False)
-        filtered_feedback = [feedback for feedback in self.all_feedback if not getattr(feedback, 'check_box_1', False)]
+        # Show feedback with the 'seen' attribute set to False
+        filtered_feedback = [feedback for feedback in self.all_feedback if not feedback['seen']]
      elif selected_value == "Seen":
-        # Show feedback with the checkbox checked (True)
-        filtered_feedback = [feedback for feedback in self.all_feedback if getattr(feedback, 'check_box_1', False)]
+        # Show feedback with the 'seen' attribute set to True
+        filtered_feedback = [feedback for feedback in self.all_feedback if feedback['seen']]
      else:
         # If no valid option is selected, show no feedback
         filtered_feedback = []
 
     # Display the filtered feedback
      self.display_products(filtered_feedback)
+
 
 
