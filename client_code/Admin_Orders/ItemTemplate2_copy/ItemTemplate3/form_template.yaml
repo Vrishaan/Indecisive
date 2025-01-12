@@ -1,0 +1,21 @@
+components:
+- data_bindings:
+  - {code: 'self.item[''name'']', property: text, writeback: false}
+  layout_properties: {full_width_row: true, grid_position: 'CRLTRS,WUPAYJ'}
+  name: label_3
+  properties: {align: center, background: 'theme:Black', foreground: 'theme:White'}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''size'']', property: text, writeback: false}
+  layout_properties: {full_width_row: true, grid_position: 'CRLTRS,VNRBZN'}
+  name: label_4
+  properties: {align: center, background: 'theme:Black', foreground: 'theme:White'}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''quantity'']', property: text, writeback: false}
+  layout_properties: {full_width_row: true, grid_position: 'CRLTRS,LNIYLP'}
+  name: label_10
+  properties: {align: center, background: 'theme:Black', foreground: 'theme:White'}
+  type: Label
+container: {type: ColumnPanel}
+is_package: true

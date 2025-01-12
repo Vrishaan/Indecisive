@@ -21,23 +21,31 @@ db_schema:
       type: date
     server: full
     title: Feedback
+  order_details:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: name
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: size
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: quantity
+      type: number
+    - admin_ui: {order: -1, width: 200}
+      name: charge_id
+      type: string
+    server: full
+    title: Order_details
   orders:
     client: full
     columns:
     - admin_ui: {width: 200}
       name: charge_id
       type: string
-    - admin_ui: {order: 3, width: 200}
-      name: quantity
-      type: number
-    - admin_ui: {order: 4, width: 200}
-      name: size
-      type: string
     - admin_ui: {width: 200}
       name: email
-      type: string
-    - admin_ui: {order: 1.25, width: 200}
-      name: name
       type: string
     - admin_ui: {order: 5, width: 200}
       name: date
@@ -105,9 +113,6 @@ db_schema:
     - admin_ui: {order: 6, width: 200}
       name: signed_up
       type: datetime
-    - admin_ui: {width: 200}
-      name: email_confirmation_key
-      type: string
     - admin_ui: {order: 8, width: 200}
       name: admin
       type: bool

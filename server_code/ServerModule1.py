@@ -36,23 +36,25 @@ def add_order(charge_id, cart_items):
     # Get the logged-in user's email
     user = anvil.users.get_user()
     user_email = user['email'] 
-
+    date = datetime.now().date()
+    app_tables.orders.add_row(
+      charge_id=charge_id,
+      email=user_email,
+      date=date,
+      status="Approval pending"
+    )
     for item in cart_items:
         # Extract details from each cart item
         name = item.get('name')  # Name of the product
         quantity = item.get('quantity')  # Quantity of the product
-        size = item.get('size')  # Size of the product (ensure size is passed in cart_items)
-        date = datetime.now().date()
+        size = item.get('size')  # Size of the product 
 
         # Add a new row to the "orders" DataTable
-        app_tables.orders.add_row(
+        app_tables.order_details.add_row(
             charge_id=charge_id,
-            email=user_email,
             name=name,
             quantity=quantity,
-            size=size,
-            date=date,
-            status="Approval pending"
+            size=size
         )
 
 # This is the server-side function to handle the database update
