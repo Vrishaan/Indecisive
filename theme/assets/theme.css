@@ -213,7 +213,7 @@ a:hover, a:active {
 
 @media(min-width:991px) {
   .content > * > .anvil-container {
-    padding: 0px 54px;
+    padding: 0px 0px;
   }
 }
 

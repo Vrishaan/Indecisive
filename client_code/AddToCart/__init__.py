@@ -37,6 +37,7 @@ class AddToCart(AddToCartTemplate):
             self.drop_down_1.selected_value = None
             self.drop_down_2.selected_value = None
             self.label_4.text = "Select Size and Quantity"
+            alert("")
         else:
             alert("Please select both size and quantity before adding to cart.")
     def timer_1_tick(self, **event_args):

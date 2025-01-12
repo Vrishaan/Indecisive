@@ -13,6 +13,7 @@ from ..Shop import Shop
 from ..Contact import Contact
 from ..About import About
 from ..Cart import Cart
+from ..Order_Status import Order_Status
 
 class Main(MainTemplate):
   
@@ -64,3 +65,8 @@ class Main(MainTemplate):
   def cart_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.navigate(self.cart_link, Cart(items=self.cart_items))
+
+  def Order_Status_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.navigate(self.Order_Status_link, Order_Status())
+    pass
