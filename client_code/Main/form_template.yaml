@@ -6,7 +6,7 @@ components:
     properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: null, spacing_above: none, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
     type: ColumnPanel
   - components:
-    - layout_properties: {grid_position: 'KPJBSC,YKGHBB'}
+    - layout_properties: {full_width_row: false, grid_position: 'KPJBSC,YKGHBB'}
       name: spacer_3
       properties: {height: 32}
       type: Spacer
@@ -57,7 +57,8 @@ components:
       name: spacer_5
       properties: {height: 32}
       type: Spacer
-    layout_properties: {full_width_row: true, grid_position: 'SFZTYX,WGSIKL'}
+    data_bindings: []
+    layout_properties: {full_width_row: true, grid_position: 'IPLDIS,ASVHJP'}
     name: card_1
     properties:
       background: theme:White
@@ -79,9 +80,6 @@ components:
   properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: max-width, spacing_above: none, spacing_below: none, tooltip: '', visible: true, wrap_on: mobile}
   type: ColumnPanel
 - components:
-  - name: link_1
-    properties: {align: center, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: 'fa:twitter', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, url: 'https://twitter.com/anvil_works', visible: false, wrap_on: mobile}
-    type: Link
   - event_bindings: {click: home_link_click}
     layout_properties: {}
     name: home_link
@@ -107,12 +105,7 @@ components:
     name: insta_link
     properties: {align: center, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: 'theme:Black', icon: 'fa:instagram', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, url: 'https://www.instagram.com/indecisiveclothingstore?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', visible: true, wrap_on: mobile}
     type: Link
-  - layout_properties: {width: 1}
-    name: spacer_1
-    properties: {height: 32}
-    type: Spacer
   - event_bindings: {click: cart_link_click}
-    layout_properties: {}
     name: cart_link
     properties: {align: center, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: 'fa:shopping-cart', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: VIEW CART, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link

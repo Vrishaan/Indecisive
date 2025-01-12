@@ -25,7 +25,7 @@ class Main(MainTemplate):
     for link in [self.home_link_copy, self.shop_link_copy, self.about_link_copy, self.contact_link_copy, self.insta_link_copy, self.link_1_copy, self.cart_link_copy]:
       link.role = ['spaced-title', 'display-responsive']
     
-    for link in [self.home_link, self.shop_link, self.about_link, self.contact_link, self.insta_link, self.link_1, self.cart_link]:
+    for link in [self.home_link, self.shop_link, self.about_link, self.contact_link, self.insta_link, self.cart_link]:
       link.role = ['spaced-title', 'display-none-responsive']
     
   def add_to_cart(self, product, quantity, size):
