@@ -36,6 +36,10 @@ components:
       padding: [null, null, null, '40']
     text: ''
   type: CheckBox
+- layout_properties: {full_width_row: true, grid_position: 'WJCEFU,PAAYTZ', row_background: 'theme:White'}
+  name: spacer_1
+  properties: {height: '2', spacing_above: none, spacing_below: none}
+  type: Spacer
 container:
   properties: {col_widths: '{}'}
   type: ColumnPanel

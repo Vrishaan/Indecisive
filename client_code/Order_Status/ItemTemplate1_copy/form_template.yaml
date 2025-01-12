@@ -1,0 +1,50 @@
+components:
+- components:
+  - data_bindings:
+    - {code: 'self.item[''product''][''img'']', property: source, writeback: false}
+    layout_properties: {grid_position: 'NWYVIC,WSTKHT'}
+    name: image_1
+    properties: {height: 166}
+    type: Image
+  - data_bindings:
+    - {code: 'self.item[''product''][''name'']', property: text, writeback: false}
+    layout_properties: {grid_position: 'NWYVIC,NZCRTN HFUTIJ,QUEZEI'}
+    name: label_1
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 16, foreground: 'theme:White', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  - data_bindings:
+    - {code: 'f"Rs: {self.item[''product''][''price'']} each"', property: text, writeback: false}
+    layout_properties: {grid_position: 'NWYVIC,NZCRTN PXDWVR,JXMZES'}
+    name: label_2
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:White', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  - data_bindings:
+    - {code: 'f"Quantity: {self.item[''quantity'']}"', property: text, writeback: false}
+    layout_properties: {grid_position: 'NWYVIC,NZCRTN CJCJZQ,BVFIHF'}
+    name: label_3
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:White', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  - data_bindings:
+    - {code: 'f"Size: {self.item[''size'']}"', property: text, writeback: false}
+    layout_properties: {grid_position: 'NWYVIC,NZCRTN MJJXYI,THFGQN'}
+    name: label_4
+    properties: {foreground: 'theme:White', text: 'f"Size:. {self.item[''size'']}"'}
+    type: Label
+  - layout_properties: {grid_position: 'NWYVIC,EHMAZZ TZFVSX,LSLEGO'}
+    name: spacer_1
+    properties: {height: 55}
+    type: Spacer
+  - data_bindings:
+    - {code: 'f"Subtotal: Rs {self.item[''product''][''price''] * self.item[''quantity'']}"', property: text, writeback: false}
+    layout_properties: {grid_position: 'NWYVIC,EHMAZZ YOJTRQ,HVFFDH'}
+    name: total_label
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 16, foreground: 'theme:White', icon: '', icon_align: left, italic: true, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  layout_properties: {grid_position: 'UIQUQE,RNNUUZ'}
+  name: column_panel_1
+  properties: {background: '', border: 2px 0px, col_spacing: medium, col_widths: '{"WSTKHT":20,"NZCRTN":40,"QUEZEI":40}', foreground: '', role: top-bottom-border, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+  type: ColumnPanel
+container:
+  properties: {col_widths: '{}', foreground: 'theme:White'}
+  type: ColumnPanel
+is_package: true

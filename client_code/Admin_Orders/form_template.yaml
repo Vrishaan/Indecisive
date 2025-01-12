@@ -39,7 +39,12 @@ components:
   type: Button
 - layout_properties: {full_width_row: true, grid_position: 'CSPKBV,QSQQSG'}
   name: label_5
-  properties: {align: center, foreground: 'theme:White', text: Order ID}
+  properties:
+    align: center
+    foreground: theme:White
+    spacing:
+      margin: [null, null, null, '22']
+    text: Order ID
   type: Label
 - layout_properties: {grid_position: 'CSPKBV,DBCFMO'}
   name: label_6
@@ -47,7 +52,7 @@ components:
     align: center
     foreground: theme:White
     spacing:
-      margin: [null, '0', null, '50']
+      margin: [null, '0', null, '60']
     text: Email
   type: Label
 - layout_properties: {grid_position: 'CSPKBV,POPKBA'}
@@ -74,7 +79,7 @@ components:
     align: center
     foreground: theme:White
     spacing:
-      margin: [null, '12', null, '12']
+      margin: [null, '12', null, '0']
     text: |
       Quantity
   type: Label
@@ -84,7 +89,7 @@ components:
     align: center
     foreground: theme:White
     spacing:
-      margin: [null, '2', null, null]
+      margin: [null, '6', null, null]
     text: |
       Date
   type: Label

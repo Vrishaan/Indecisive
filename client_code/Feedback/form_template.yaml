@@ -65,9 +65,13 @@ components:
   name: label_9
   properties: {align: center, foreground: 'theme:White', text: Seen}
   type: Label
+- layout_properties: {full_width_row: true, grid_position: 'LIBTTG,GEPZZV', row_background: 'theme:White'}
+  name: spacer_1
+  properties: {height: '2', spacing_above: none, spacing_below: none}
+  type: Spacer
 - layout_properties: {full_width_row: true, grid_position: 'WCODBO,KVSHZF'}
   name: repeating_panel_1
-  properties: {item_template: Feedback.ItemTemplate2}
+  properties: {item_template: Feedback.ItemTemplate2, spacing_above: none, spacing_below: none}
   type: RepeatingPanel
 container:
   properties: {col_widths: '{"XHGPYT":60,"HJYPCI":10,"IPKVNV":10}'}

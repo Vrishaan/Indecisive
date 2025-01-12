@@ -32,7 +32,7 @@ class Cart(CartTemplate):
             self.subtotal += 199
         
         # Update total
-        self.total_label.text = f"Rs{self.subtotal:.02f}"
+        self.total_label.text = f"Rs {self.subtotal:.02f}"
 
     def shop_button_click(self, **event_args):
         """This method is called when the Shop button is clicked."""
