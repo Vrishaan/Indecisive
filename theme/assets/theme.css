@@ -329,7 +329,7 @@ a:hover, a:active {
 }
 .left-nav > .column-panel > .anvil-panel-section > .anvil-panel-section-container:not(.full-width-row) {
   margin: 0 16px;
-  width: initial;
+  width: initial%;
   max-width: initial;
   overflow-x: visible;
 }

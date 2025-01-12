@@ -68,6 +68,7 @@ components:
       foreground: ''
       role: null
       spacing:
+        margin: [null, null, null, 0]
         padding: [null, null, null, 0]
       spacing_above: none
       spacing_below: none
