@@ -5,7 +5,7 @@ components:
   properties:
     background: theme:White
     foreground: theme:Black
-    items: [All, Approval pending, Awaiting shipment, 'Dispatched ', Completed]
+    items: [All, Approval pending, Awaiting shipment, Dispatched, Completed]
   type: DropDown
 - event_bindings: {pressed_enter: search_box_pressed_enter}
   layout_properties: {full_width_row: true, grid_position: 'IEXOVL,XHGPYT'}
@@ -39,27 +39,44 @@ components:
   type: Button
 - layout_properties: {full_width_row: true, grid_position: 'CSPKBV,QSQQSG'}
   name: label_5
-  properties: {align: right, foreground: 'theme:White', text: Order ID}
+  properties: {align: center, foreground: 'theme:White', text: Order ID}
   type: Label
 - layout_properties: {grid_position: 'CSPKBV,DBCFMO'}
   name: label_6
-  properties: {align: center, foreground: 'theme:White', text: Email}
+  properties:
+    align: center
+    foreground: theme:White
+    spacing:
+      margin: [null, '60', null, null]
+    text: Email
+  type: Label
+- layout_properties: {grid_position: 'CSPKBV,POPKBA'}
+  name: label_11
+  properties:
+    align: center
+    foreground: theme:White
+    spacing:
+      margin: [null, '34', null, null]
+    text: Name
   type: Label
 - layout_properties: {grid_position: 'CSPKBV,WIFRIH'}
   name: label_7
-  properties: {align: left, foreground: 'theme:White', text: Name}
+  properties:
+    align: center
+    foreground: theme:White
+    spacing:
+      margin: [null, '12', null, null]
+    text: Size
   type: Label
 - layout_properties: {grid_position: 'CSPKBV,LLPMNR'}
   name: label_8
   properties:
     align: center
     foreground: theme:White
+    spacing:
+      margin: [null, '24', null, null]
     text: |
-      Size
-  type: Label
-- layout_properties: {grid_position: 'CSPKBV,SKLCLL'}
-  name: label_11
-  properties: {align: center, foreground: 'theme:White', text: Quantity}
+      Quantity
   type: Label
 - layout_properties: {grid_position: 'CSPKBV,FRVEQV'}
   name: label_1
@@ -71,13 +88,18 @@ components:
   type: Label
 - layout_properties: {grid_position: 'CSPKBV,HHKOJS'}
   name: label_9
-  properties: {align: center, foreground: 'theme:White', text: Status}
+  properties:
+    align: center
+    foreground: theme:White
+    spacing:
+      margin: [null, '28', null, '28']
+    text: Status
   type: Label
 - layout_properties: {full_width_row: true, grid_position: 'WCODBO,KVSHZF'}
   name: repeating_panel_1
   properties: {item_template: Admin_Orders.ItemTemplate2_copy}
   type: RepeatingPanel
 container:
-  properties: {col_widths: '{"XHGPYT":60,"HJYPCI":10,"IPKVNV":10,"QSQQSG":10,"DBCFMO":15,"WIFRIH":10,"LLPMNR":5,"SKLCLL":10,"HHKOJS":10}'}
+  properties: {col_widths: '{"XHGPYT":60,"HJYPCI":10,"IPKVNV":10,"QSQQSG":20,"DBCFMO":10,"WIFRIH":5,"LLPMNR":5,"HHKOJS":13,"FRVEQV":8,"POPKBA":8}'}
   type: ColumnPanel
 is_package: true

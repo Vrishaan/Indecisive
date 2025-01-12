@@ -42,10 +42,11 @@ components:
   name: drop_down_1
   properties:
     background: theme:Black
+    border: ''
     foreground: theme:White
-    items: [Approval pending, Awaiting shipment, 'Dispatched ', Completed]
+    items: [Approval pending, Awaiting shipment, Dispatched, Completed]
   type: DropDown
 container:
-  properties: {col_widths: '{"ZFHDXR":15,"EDANPG":10,"XFKHGD":10,"DWPBIO":10,"IUCANF":5,"MMQLLO":10,"PXCVFY":13}'}
+  properties: {col_widths: '{"ZFHDXR":20,"EDANPG":10,"XFKHGD":10,"DWPBIO":5,"IUCANF":5,"MMQLLO":13,"PXCVFY":10}'}
   type: ColumnPanel
 is_package: true
