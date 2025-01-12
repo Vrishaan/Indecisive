@@ -68,12 +68,14 @@ class Admin_Orders(Admin_OrdersTemplate):
      if selected_value == "All":
         # Show all feedback
         filtered_orders = self.all_orders
-     elif selected_value == "Unseen":
-        # Show feedback with the 'seen' attribute set to False
-        filtered_orders = [order for order in self.all_orders if not order['seen']]
-     elif selected_value == "Seen":
-        # Show feedback with the 'seen' attribute set to True
-        filtered_orders = [order for order in self.all_orders if order['seen']]
+     elif selected_value == "Approval pending":
+        filtered_orders = [order for order in self.all_orders if order['status']=="Approval pending"]
+     elif selected_value == "Awaiting shipment":
+        filtered_orders = [order for order in self.all_orders if order['status']=="Awaiting shipment"]
+     elif selected_value == "Dispatched":
+        filtered_orders = [order for order in self.all_orders if order['status']=="Dispatched"]
+     elif selected_value == "Completed":
+        filtered_orders = [order for order in self.all_orders if order['status']=="Completed"]
      else:
         # If no valid option is selected, show no feedback
         filtered_orders = []

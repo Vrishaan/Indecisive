@@ -52,7 +52,7 @@ def add_order(charge_id, cart_items):
             quantity=quantity,
             size=size,
             date=date,
-            seen=False
+            status="Approval pending"
         )
 
 # This is the server-side function to handle the database update
