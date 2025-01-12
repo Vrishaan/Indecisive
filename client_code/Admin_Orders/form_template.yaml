@@ -47,16 +47,16 @@ components:
     align: center
     foreground: theme:White
     spacing:
-      margin: [null, '60', null, null]
+      margin: [null, '0', null, '50']
     text: Email
   type: Label
 - layout_properties: {grid_position: 'CSPKBV,POPKBA'}
   name: label_11
   properties:
-    align: center
+    align: right
     foreground: theme:White
     spacing:
-      margin: [null, '34', null, null]
+      margin: [null, '0', null, '60']
     text: Name
   type: Label
 - layout_properties: {grid_position: 'CSPKBV,WIFRIH'}
@@ -65,7 +65,7 @@ components:
     align: center
     foreground: theme:White
     spacing:
-      margin: [null, '12', null, null]
+      margin: [null, '0', null, '30']
     text: Size
   type: Label
 - layout_properties: {grid_position: 'CSPKBV,LLPMNR'}
@@ -74,7 +74,7 @@ components:
     align: center
     foreground: theme:White
     spacing:
-      margin: [null, '24', null, null]
+      margin: [null, '12', null, '12']
     text: |
       Quantity
   type: Label
@@ -83,6 +83,8 @@ components:
   properties:
     align: center
     foreground: theme:White
+    spacing:
+      margin: [null, '2', null, null]
     text: |
       Date
   type: Label
@@ -92,14 +94,18 @@ components:
     align: center
     foreground: theme:White
     spacing:
-      margin: [null, '28', null, '28']
+      margin: [null, '0', null, '6']
     text: Status
   type: Label
+- layout_properties: {full_width_row: true, grid_position: 'JOLXIN,BVLOEL', row_background: 'theme:White'}
+  name: spacer_1
+  properties: {height: '2', spacing_above: none, spacing_below: none}
+  type: Spacer
 - layout_properties: {full_width_row: true, grid_position: 'WCODBO,KVSHZF'}
   name: repeating_panel_1
-  properties: {item_template: Admin_Orders.ItemTemplate2_copy}
+  properties: {item_template: Admin_Orders.ItemTemplate2_copy, spacing_above: none, spacing_below: none}
   type: RepeatingPanel
 container:
-  properties: {col_widths: '{"XHGPYT":60,"HJYPCI":10,"IPKVNV":10,"QSQQSG":20,"DBCFMO":10,"WIFRIH":5,"LLPMNR":5,"HHKOJS":13,"FRVEQV":8,"POPKBA":8}'}
+  properties: {col_widths: '{"XHGPYT":60,"HJYPCI":10,"IPKVNV":10,"QSQQSG":20,"DBCFMO":10,"WIFRIH":5,"LLPMNR":5,"HHKOJS":14,"FRVEQV":10,"POPKBA":5}'}
   type: ColumnPanel
 is_package: true

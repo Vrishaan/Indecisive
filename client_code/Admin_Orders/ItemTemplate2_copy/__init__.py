@@ -14,6 +14,9 @@ class ItemTemplate2_copy(ItemTemplate2_copyTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    charge_id = self.item['charge_id']
+    order_details_records = app_tables.order_details.search(charge_id=charge_id)
+    self.repeating_panel_1.items = order_details_records
 
     # Any code you write here will run before the form opens.
 

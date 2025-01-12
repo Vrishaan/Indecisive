@@ -32,7 +32,11 @@ components:
     foreground: theme:White
     items: [Approval pending, Awaiting shipment, Dispatched, Completed]
   type: DropDown
+- layout_properties: {full_width_row: true, grid_position: 'WUYRLA,CYMOQD', row_background: 'theme:White'}
+  name: spacer_1_copy
+  properties: {height: '2', spacing_above: none, spacing_below: none}
+  type: Spacer
 container:
-  properties: {col_widths: '{"ZFHDXR":20,"EDANPG":10,"IUCANF":5,"MMQLLO":13,"PXCVFY":10}'}
+  properties: {col_widths: '{"ZFHDXR":20,"EDANPG":10,"MMQLLO":13,"PXCVFY":10,"EAMTWD":12}'}
   type: ColumnPanel
 is_package: true
