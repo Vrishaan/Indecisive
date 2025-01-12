@@ -52,11 +52,9 @@ class Cart(CartTemplate):
                 icon_url="_/theme/cupcake_logo.png"
             )
             
-            # Log the charge response for debugging
-            print(f"Stripe charge response: {charge}")
-            
             # Validate the response and process the order
             if charge.get('result') == 'succeeded' and 'charge_id' in charge:
+                charge_id=charge
                 # Save the order on the server
                 anvil.server.call('add_order', charge['charge_id'], self.order)
 
@@ -77,7 +75,7 @@ class Cart(CartTemplate):
                 user = anvil.users.get_user()
                 if user:
                     email = user['email']
-                    anvil.server.call('send_order_confirmation_email', email, self.order, self.subtotal)
+                    anvil.server.call('send_order_confirmation_email', email, self.order, self.subtotal, charge_id)
 
                 # Show a success notification
                 Notification("Your order has been received! A confirmation email has been sent.").show()
@@ -85,6 +83,5 @@ class Cart(CartTemplate):
                 # Clear the cart and navigate back
                 get_open_form().cart_items = []
                 get_open_form().cart_link_click()
-        except Exception as e:
-            # Log the error for debugging but do not show failure alerts
-            print(f"Exception during checkout: {e}")
+        except Exception:
+            Notification("An error occurred during the checkout process. Please try again.").show()

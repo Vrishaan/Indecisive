@@ -88,11 +88,9 @@ def add_product(name, description, price, stock, is_best_seller, image, small, m
     )
 
 @anvil.server.callable
-def send_order_confirmation_email(email, order, subtotal):
+def send_order_confirmation_email(email, order, subtotal, charge_id):
     """Send an order confirmation email to the user."""
     subject = "Order Confirmation - Indecisive Clothing Store"
-    body = "Thank you for your purchase!\n\nHere is your order summary:\n\n"
-    for item in order:
-        body += f" {item['quantity']} x {item['name']} (Size: {item['size']})\n"
-    body += f"\nTotal Amount Paid: Rs {subtotal:.02f}\n\nThank you!"
+    body = f"Thank you for your order with Indecisive! We are pleased to confirm that your order has been successfully received.\n\nYou can view your order summary and track your order status by using your Order ID: {charge_id['charge_id']}\n\n"
+    body += "Thank you for choosing Indecisive. We appreciate your business and look forward to serving you again.\n\nBest Regards,\nIndecisve Clothing Store."
     anvil.google.mail.send(to=email, subject=subject, text=body)
