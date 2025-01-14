@@ -19,9 +19,8 @@ class Login(LoginTemplate):
     anvil.users.login_with_form()
      
     user= anvil.users.get_user()
-    if user['admin'] is False:
-      open_form('Main')
-    else:
+    if user['admin'] is True:
       open_form('Admin')
+    else:
+      open_form('Main')
     pass
-    

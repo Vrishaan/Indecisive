@@ -23,10 +23,10 @@ class Main(MainTemplate):
     self.navigate(self.home_link, Home())
     self.cart_items = []
     
-    for link in [self.home_link_copy, self.shop_link_copy, self.about_link_copy, self.contact_link_copy, self.insta_link_copy, self.link_1_copy, self.cart_link_copy]:
+    for link in [self.home_link_copy, self.shop_link_copy, self.about_link_copy, self.contact_link_copy, self.insta_link_copy, self.cart_link_copy, self.Order_Status_link_copy]:
       link.role = ['spaced-title', 'display-responsive']
     
-    for link in [self.home_link, self.shop_link, self.about_link, self.contact_link, self.insta_link, self.cart_link]:
+    for link in [self.home_link, self.shop_link, self.about_link, self.contact_link, self.insta_link, self.cart_link, self.Order_Status_link]:
       link.role = ['spaced-title', 'display-none-responsive']
     
   def add_to_cart(self, product, quantity, size):
@@ -39,7 +39,7 @@ class Main(MainTemplate):
       self.cart_items.append({'product': product, 'quantity': quantity, 'size': size})
     
   def navigate(self, active_link, form):
-    for i in [self.home_link, self.shop_link, self.about_link, self.contact_link, self.cart_link]:
+    for i in [self.home_link, self.shop_link, self.about_link, self.contact_link, self.cart_link, self.Order_Status_link]:
       i.foreground = 'theme:Primary 700'
     active_link.foreground = 'theme:Secondary 500'
     self.column_panel_1.clear()

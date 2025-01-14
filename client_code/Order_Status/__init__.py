@@ -27,6 +27,7 @@ class Order_Status(Order_StatusTemplate):
         if self.order_row:  # Check if an order row is found
             # Display the order status
             self.label_2.text = f"Status: {self.order_row['status']}"
+            self.label_4.text = "Order Details:"
             
             # Fetch related order details using the charge_id
             order_details = app_tables.order_details.search(charge_id=charge_id)

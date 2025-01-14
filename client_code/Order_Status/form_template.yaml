@@ -27,7 +27,7 @@ components:
   type: Label
 - layout_properties: {grid_position: 'EUBIFB,LUXSHS'}
   name: label_4
-  properties: {align: center, background: 'theme:Black', font_size: 22, foreground: 'theme:White', text: 'Order Details:'}
+  properties: {align: center, background: 'theme:Black', font_size: 22, foreground: 'theme:White', text: ''}
   type: Label
 - layout_properties: {grid_position: 'MUOLWB,NMNTRD'}
   name: repeating_panel_1
@@ -38,6 +38,10 @@ components:
   name: label_3
   properties: {align: center, background: 'theme:Black', bold: false, font_size: 20, foreground: 'theme:White', italic: false}
   type: Label
+- layout_properties: {grid_position: 'KXGTWG,RBSQAR'}
+  name: spacer_3
+  properties: {height: 180}
+  type: Spacer
 - layout_properties: {grid_position: 'BVCWVH,HVYODD'}
   name: spacer_1
   properties: {height: 182}
