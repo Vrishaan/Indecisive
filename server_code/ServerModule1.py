@@ -91,6 +91,13 @@ def add_product(name, description, price, stock, is_best_seller, image, small, m
 def send_order_confirmation_email(email, order, subtotal, charge_id):
     """Send an order confirmation email to the user."""
     subject = "Order Confirmation - Indecisive Clothing Store"
-    body = f"Thank you for your order with Indecisive! We are pleased to confirm that your order has been successfully received.\n\nYou can view your order summary and track your order status by using your Order ID: {charge_id['charge_id']}\n\n"
-    body += "Thank you for choosing Indecisive. We appreciate your business and look forward to serving you again.\n\nBest Regards,\nIndecisve Clothing Store."
-    anvil.google.mail.send(to=email, subject=subject, text=body)
+    body = "Hi there!\n\nThank you for your order with Indecisive! We must say that you have an awesome taste in shopping! We cannot thank you enough for taking the time out and shopping with us. We really hope you found what you were looking for. Eagerly awaiting your next order with us.\n\n We are pleased to confirm that your order has been successfully received.\n\n"
+    
+    # Create the clickable link with the order details page URL
+    order_details_url = "https://cz36ljsqxwm6bbz4.anvil.app/debug/IFR54JZJNNG2RKAQ5KA5PNRSNZGQ7BLG%3DOQCUIH23PBHLXTB3R2NSETR7"
+    body += f"\nYou can <a href='{order_details_url}'>view your order</a> details and track your order status by using the Order ID here: \n\n"
+    <a href='{order_details_url}'>view your order</a>
+    body += ""\n\nBest Regards,\nIndecisve Clothing Store."
+    
+    # Send the email using Anvil's Google Mail service
+    anvil.google.mail.send(to=email, subject=subject, html=body)
