@@ -27,8 +27,20 @@ class AddToCart(AddToCartTemplate):
             # Get the selected size and quantity
             size = self.drop_down_2.selected_value
             quantity = self.drop_down_1.selected_value
-            # Add the item to the cart, passing the updated self.item, size, and quantity
-            get_open_form().add_to_cart(self.item, quantity, size)
+            item_name = self.item['name']
+            user = anvil.users.get_user()
+            # Add the item to the cart
+            # Check for existing cart entry
+            existing_entry = app_tables.cart.get(name=item_name, size=size, email=user['email'])
+            if existing_entry:
+              existing_entry['quantity'] += quantity
+            else:
+              app_tables.cart.add_row(
+              name=item_name,
+              size=size,
+              quantity=quantity,
+              email=user['email']
+              )
             # Hide add_button and show added_button
             self.add_button.visible = False
             self.added_button.visible = True

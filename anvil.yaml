@@ -1,6 +1,23 @@
 allow_embedding: false
 correct_dependency_ids: {}
 db_schema:
+  cart:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: name
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: quantity
+      type: number
+    - admin_ui: {order: 2, width: 200}
+      name: size
+      type: string
+    - admin_ui: {order: -1, width: 200}
+      name: email
+      type: string
+    server: full
+    title: Cart
   feedback:
     client: full
     columns:
