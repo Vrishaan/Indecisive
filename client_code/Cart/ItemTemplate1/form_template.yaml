@@ -1,40 +1,40 @@
 components:
 - components:
-  - data_bindings:
-    - {code: 'self.item[''product''][''img'']', property: source}
+  - data_bindings: []
+    event_bindings: {show: image_1_show}
     layout_properties: {grid_position: 'NWYVIC,WSTKHT'}
     name: image_1
     properties: {height: 166}
     type: Image
-  - data_bindings:
-    - {code: 'self.item[''product''][''name'']', property: text}
+  - data_bindings: []
+    event_bindings: {show: label_1_show}
     layout_properties: {grid_position: 'NWYVIC,NZCRTN HFUTIJ,QUEZEI'}
     name: label_1
     properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 16, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
     type: Label
-  - data_bindings:
-    - {code: 'f"Subtotal: Rs {self.item[''product''][''price''] * self.item[''quantity'']}"', property: text, writeback: false}
+  - data_bindings: []
+    event_bindings: {show: total_label_show}
     layout_properties: {grid_position: 'NWYVIC,NZCRTN HFUTIJ,AIBSDM'}
     name: total_label
     properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 16, foreground: '', icon: '', icon_align: left, italic: true, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
     type: Label
-  - data_bindings:
-    - {code: 'f"Rs {self.item[''product''][''price'']} each"', property: text, writeback: false}
+  - data_bindings: []
+    event_bindings: {show: label_2_show}
     layout_properties: {grid_position: 'NWYVIC,NZCRTN ISFRII,CJHQNT PXDWVR,JXMZES'}
     name: label_2
     properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
     type: Label
-  - data_bindings:
-    - {code: 'f"Quantity: {self.item[''quantity'']}"', property: text, writeback: false}
+  - data_bindings: []
+    event_bindings: {show: label_3_show}
     layout_properties: {grid_position: 'NWYVIC,NZCRTN ISFRII,CJHQNT CJCJZQ,BVFIHF'}
     name: label_3
     properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
     type: Label
-  - data_bindings:
-    - {code: 'f"Size: {self.item[''size'']}"', property: text, writeback: false}
+  - data_bindings: []
+    event_bindings: {show: label_4_show}
     layout_properties: {grid_position: 'NWYVIC,NZCRTN ISFRII,CJHQNT MJJXYI,THFGQN'}
     name: label_4
-    properties: {text: 'f"Size:. {self.item[''size'']}"'}
+    properties: {foreground: 'theme:White', text: ''}
     type: Label
   - event_bindings: {click: delete_button_click}
     layout_properties: {grid_position: 'NWYVIC,NZCRTN ISFRII,YXQNRB'}
