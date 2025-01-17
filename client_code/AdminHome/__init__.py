@@ -38,7 +38,7 @@ class AdminHome(AdminHomeTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('AddProduct')
+    alert(content=AddProduct(), large=True)
     pass
 
   def search_box_pressed_enter(self, **event_args):

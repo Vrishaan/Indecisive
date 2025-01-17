@@ -46,17 +46,14 @@ class AddProduct(AddProductTemplate):
     self.text_box_2.text = ''
     self.text_box_3.text = ''
     self.quantity_box.text = ''
+    self.quantity_box_copy.text = ''
+    self.quantity_box_copy_2.text = ''
     self.check_box_1.checked = False
     self.file_loader_1.clear()
 
     # You can show a success message here
     alert("Product added successfully!")
     open_form('Admin')
-
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('Admin')
-    pass
 
   # Assuming `file_loader_1` is your FileLoader and `image_1` is the Image component
 
@@ -65,4 +62,4 @@ class AddProduct(AddProductTemplate):
     if file:
         # Set the image_1 source to the uploaded file
         self.image_1.source = file
-        # Optionally, you can add some extra behavior when the image is shown, like enabling or resizing components
+        
