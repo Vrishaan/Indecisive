@@ -106,7 +106,7 @@ components:
   name: delete
   properties: {background: '#e32400', foreground: 'theme:Black', text: Delete}
   type: Button
-- event_bindings: {}
+- event_bindings: {tick: timer_1_tick}
   name: timer_1
   properties: {interval: 0.5}
   type: Timer

@@ -40,6 +40,9 @@ class AddProduct(AddProductTemplate):
 
     # Call the server function to add the product to the database
     anvil.server.call('add_product', name, description, price, stock, is_best_seller, image, small, medium, large)
+    self.add_button.visible = False
+    self.added_button.visible = True
+    self.timer_1.interval = 2
 
     # Optionally, clear the fields after submission
     self.text_box_1.text = ''
@@ -62,4 +65,9 @@ class AddProduct(AddProductTemplate):
     if file:
         # Set the image_1 source to the uploaded file
         self.image_1.source = file
-        
+
+  def timer_1_tick(self, **event_args):
+    """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
+    self.add_button.visible = True
+    self.added_button.visible = False
+    pass

@@ -106,6 +106,9 @@ class Edit(EditTemplate):
                 if self.selected_image:
                     product_row['img'] = self.selected_image  # Update the image field in the database
                     Notification("Product image updated.").show()
+                self.add_button.visible = False
+                self.added_button.visible = True
+                self.timer_1.interval = 2
             # Update the stock display after the update
             self.update_stock_display()
 
@@ -164,3 +167,9 @@ class Edit(EditTemplate):
                 open_form('Admin')
             else:
                 Notification("Could not delete, please try again").show()
+
+    def timer_1_tick(self, **event_args):
+      """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
+      self.add_button.visible = True
+      self.added_button.visible = False
+      pass
