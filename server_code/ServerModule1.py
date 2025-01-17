@@ -94,7 +94,7 @@ def send_order_confirmation_email(email, order, subtotal, charge_id):
     body = "Hi there!\n\n<br><br>Thank you for your order with Indecisive! We must say that you have an awesome taste in shopping! We cannot thank you enough for taking the time out and shopping with us. We really hope you found what you were looking for. Eagerly awaiting your next order with us.\n\n<br><br> We are pleased to confirm that your order has been successfully received.\n\n"
     
     # Create the clickable link with the order details page URL
-    order_details_url = "https://cz36ljsqxwm6bbz4.anvil.app/debug/IFR54JZJNNG2RKAQ5KA5PNRSNZGQ7BLG%3DOQCUIH23PBHLXTB3R2NSETR7"
+    order_details_url = "https://cz36ljsqxwm6bbz4.anvil.app/UXHXDF52RQ4277UK3XIWOBT5"
     body += f"\n<br>You can <a href='{order_details_url}'>view your order</a> details and track your order status by using the Order ID: {charge_id['charge_id']}\n\n"
     body += "\n\n<br><br><br>Best Regards,\n<br>Indecisve Clothing Store."
     
