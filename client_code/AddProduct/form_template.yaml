@@ -46,9 +46,15 @@ components:
   name: label_5
   properties: {foreground: 'theme:Black', text: Best Seller}
   type: Label
-- layout_properties: {grid_position: 'XWJJFA,BTUFOG AAZTSZ,YFDTVA'}
+- data_bindings: []
+  layout_properties: {grid_position: 'XWJJFA,BTUFOG GQZMRQ,ABZXSM'}
   name: check_box_1
-  properties: {text: check_box_1}
+  properties:
+    align: right
+    foreground: theme:Black
+    spacing:
+      padding: [null, 0, null, 0]
+    text: ''
   type: CheckBox
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG RZWTXS,CVDMMS'}
   name: label_3
@@ -64,16 +70,16 @@ components:
   type: Label
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG ZCKYMK,DZPZWZ'}
   name: quantity_box
-  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Black', hide_text: false, italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: number, underline: false, visible: true}
+  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Black', hide_text: false, italic: false, placeholder: '0', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: number, underline: false, visible: true}
   type: TextBox
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG ZCKYMK,DYAOEB'}
   name: quantity_box_copy
-  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Black', hide_text: false, italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: number, underline: false, visible: true}
+  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Black', hide_text: false, italic: false, placeholder: '0', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: number, underline: false, visible: true}
   type: TextBox
 - data_bindings: []
   layout_properties: {grid_position: 'XWJJFA,BTUFOG ZCKYMK,AZBATE'}
   name: quantity_box_copy_2
-  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Black', hide_text: false, italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: number, underline: false, visible: true}
+  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Black', hide_text: false, italic: false, placeholder: '0', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: number, underline: false, visible: true}
   type: TextBox
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG HMWXTO,KSGAJS'}
   name: spacer_2
@@ -98,6 +104,6 @@ components:
   properties: {interval: 0.5}
   type: Timer
 container:
-  properties: {background: 'theme:White', col_spacing: medium, col_widths: '{}', foreground: 'theme:White', spacing_above: none, spacing_below: none}
+  properties: {background: 'theme:White', col_spacing: medium, col_widths: '{"AFWYBO":50,"ABZXSM":10}', foreground: 'theme:White', spacing_above: none, spacing_below: none}
   type: ColumnPanel
 is_package: true

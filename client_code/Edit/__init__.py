@@ -71,12 +71,12 @@ class Edit(EditTemplate):
                 medium_quantity = int(self.quantity_box_copy.text)  # Convert to int if valid input
                 size_row = app_tables.size.get(name=self.item['name'],size='M')
                 size_row['stock'] = medium_quantity
-                Notification(f"Quantity (M) updated to: {small_quantity}").show()
+                Notification(f"Quantity (M) updated to: {medium_quantity}").show()
             if self.quantity_box_copy_2.text:
                 large_quantity = int(self.quantity_box_copy_2.text)  # Convert to int if valid input
                 size_row = app_tables.size.get(name=self.item['name'],size='L')
                 size_row['stock'] = large_quantity
-                Notification(f"Quantity (L) updated to: {small_quantity}").show()
+                Notification(f"Quantity (L) updated to: {large_quantity}").show()
 
             # Fetch the product row from the database
             product_name = self.item['name']  # Access the product's 'name'

@@ -22,14 +22,17 @@ class AddProduct(AddProductTemplate):
     large = self.quantity_box_copy_2.text
 
     # Check if any required field is empty
-    if not name or not description or not price_text or not stock_text or not small or not medium or not large or not self.file_loader_1.file:
+    if not name or not description or not price_text or not self.file_loader_1.file:
         alert("Please fill in all the fields.")
         return  # Stop the function if any field is empty
 
     # Convert price and stock values after ensuring they are not empty
     try:
         price = float(price_text)  # Convert price to float
-        stock = int(stock_text)  # Convert stock to int
+        if stock_text:
+          stock = int(stock_text)  # Convert stock to int
+        else:
+          stock = 0
     except ValueError:
         alert("Please enter valid numbers for price and stock.")
         return
