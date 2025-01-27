@@ -90,6 +90,14 @@ components:
     name: checkout_button
     properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: 'fa:lock', icon_align: left, italic: false, role: secondary-color, spacing_above: small, spacing_below: small, text: Checkout, tooltip: '', underline: false, visible: true}
     type: Button
+  - layout_properties: {grid_position: 'OUWTBH,YWQKWK KFLSMV,WTPIIO'}
+    name: label_6
+    properties:
+      align: center
+      foreground: theme:White
+      text: |
+        *Cash on Delivery not available
+    type: Label
   - layout_properties: {grid_position: 'UVUQWM,YJMGYE'}
     name: spacer_6
     properties: {height: 150}
