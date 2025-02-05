@@ -100,3 +100,28 @@ def send_order_confirmation_email(email, order, subtotal, charge_id):
     
     # Send the email using Anvil's Google Mail service
     anvil.google.mail.send(to=email, subject=subject, html=body)
+
+  
+   # --- Admin Emails ---
+    subject_admin = "New Order Received"
+    body_admin = f"""
+    Hello,<br><br>
+    A new order has been placed on Indecisive Clothing Store. Please review the details below and start processing the order.<br><br>
+    
+    <b>Customer Email:</b> {email}<br>
+    <b>Items Ordered:</b> {order}<br>
+    <b>Subtotal:</b> ${subtotal:.2f}<br>
+    <b>Charge ID:</b> {charge_id['charge_id']}<br><br>
+
+    Please ensure that the order is packed and shipped promptly.<br><br>
+    
+    
+    Best,<br>Indecisive Clothing Store Team.
+    """
+    
+    # Fetch all admin emails from the 'users' Data Table
+    admin_emails = [user['email'] for user in app_tables.users.search(admin=True)]
+    
+    # Send email to all admins
+    for admin_email in admin_emails:
+        anvil.google.mail.send(to=admin_email, subject=subject_admin, html=body_admin)
