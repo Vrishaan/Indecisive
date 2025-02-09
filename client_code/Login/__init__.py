@@ -24,3 +24,5 @@ class Login(LoginTemplate):
     else:
       open_form('Main')
     pass
+
+    
