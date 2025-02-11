@@ -24,6 +24,10 @@ components:
     name: link_4
     properties: {text: Orders}
     type: Link
+  - event_bindings: {click: cart_link_click}
+    name: Log_Out
+    properties: {align: center, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: 'fa:sign-out', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: Log Out, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
   layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
