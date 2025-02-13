@@ -12,17 +12,17 @@ components:
   - event_bindings: {click: link_2_click}
     layout_properties: {}
     name: link_2
-    properties: {text: Products}
+    properties: {font_size: 16, foreground: 'theme:Black', text: Products}
     type: Link
   - event_bindings: {click: link_1_click}
     layout_properties: {}
     name: link_1
-    properties: {text: Feedback}
+    properties: {font_size: 16, foreground: 'theme:Black', text: Feedback}
     type: Link
   - event_bindings: {click: link_4_click}
     layout_properties: {}
     name: link_4
-    properties: {text: Orders}
+    properties: {font_size: 16, foreground: 'theme:Black', text: Orders}
     type: Link
   - event_bindings: {click: cart_link_click}
     name: Log_Out

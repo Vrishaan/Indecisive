@@ -65,10 +65,15 @@ class Main(MainTemplate):
 
   def cart_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    anvil.users.logout()
-    open_form('Login')
+    self.navigate(self.cart_link, Cart())
 
   def Order_Status_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.navigate(self.Order_Status_link, Order_Status())
+    pass
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    anvil.users.logout()
+    open_form('Login')
     pass

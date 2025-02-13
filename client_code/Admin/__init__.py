@@ -47,3 +47,9 @@ class Admin(AdminTemplate):
     def link_1_click(self, **event_args):
         """Navigate to the Feedback page."""
         self.navigate(self.link_1, Feedback())
+
+    def cart_link_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      anvil.users.logout()
+      open_form('Login')
+      pass
