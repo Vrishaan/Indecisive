@@ -58,7 +58,7 @@ components:
 - event_bindings: {click: shop_button_click}
   layout_properties: {grid_position: 'HFUZBQ,QFGZYQ'}
   name: shop_button
-  properties: {align: center, background: 'theme:White', bold: true, border: '', enabled: true, font: Calibri, font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: secondary-color, spacing_above: small, spacing_below: small, text: SHOP NOW, tooltip: '', underline: false, visible: true}
+  properties: {align: center, background: 'theme:White', bold: true, border: '', enabled: true, font: Calibri, font_size: 16, foreground: 'theme:Black', icon: 'fa:shopping-bag', icon_align: right, italic: false, role: secondary-color, spacing_above: small, spacing_below: small, text: SHOP NOW, tooltip: '', underline: false, visible: true}
   type: Button
 - layout_properties: {grid_position: 'OCYAYI,YBQGEM'}
   name: spacer_4

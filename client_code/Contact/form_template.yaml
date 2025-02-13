@@ -47,7 +47,7 @@ components:
       font_size: null
       foreground: ''
       icon: fa:arrow-right
-      icon_align: left
+      icon_align: right
       italic: false
       role: secondary-color
       spacing:

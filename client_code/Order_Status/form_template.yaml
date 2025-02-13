@@ -14,7 +14,7 @@ components:
 - event_bindings: {click: button_1_click}
   layout_properties: {full_width_row: true, grid_position: 'YPGHXJ,NTBBDY'}
   name: button_1
-  properties: {role: secondary-color, text: Check Status}
+  properties: {icon: 'fa:arrow-right', icon_align: right, role: secondary-color, text: Check Status}
   type: Button
 - layout_properties: {grid_position: 'KZXGLN,QQQJJO'}
   name: spacer_2

@@ -27,7 +27,7 @@ components:
 - event_bindings: {click: add_button_click}
   layout_properties: {grid_position: 'ETQURE,YNPTKL'}
   name: add_button
-  properties: {align: full, background: '', bold: true, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: secondary-color, spacing_above: small, spacing_below: small, text: add to cart, tooltip: '', underline: false, visible: true}
+  properties: {align: full, background: '', bold: true, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: 'fa:cart-plus', icon_align: right, italic: false, role: secondary-color, spacing_above: small, spacing_below: small, text: add to cart, tooltip: '', underline: false, visible: true}
   type: Button
 container:
   properties: {background: '', border: '', col_spacing: medium, col_widths: '{"WRYPAY":70}', foreground: '', role: null, spacing_above: none, spacing_below: medium, tooltip: '', visible: true, wrap_on: mobile}

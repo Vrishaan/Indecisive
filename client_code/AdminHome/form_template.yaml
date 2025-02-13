@@ -16,7 +16,7 @@ components:
     font: ''
     font_size: null
     foreground: ''
-    icon: ''
+    icon: fa:trash
     icon_align: left
     italic: false
     role: secondary-color
@@ -37,7 +37,7 @@ components:
 - event_bindings: {click: button_1_click}
   layout_properties: {grid_position: 'BTJOGZ,DSIZSG'}
   name: button_1
-  properties: {align: center, background: 'theme:Secondary 500', foreground: 'theme:White', text: Add Product}
+  properties: {align: center, background: 'theme:Secondary 500', foreground: 'theme:White', icon: 'fa:plus', icon_align: right, text: Add Product}
   type: Button
 container:
   properties: {background: '', col_widths: '{"KCOISO":50,"FDEBPD":10}'}

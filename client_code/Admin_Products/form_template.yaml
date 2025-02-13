@@ -36,7 +36,7 @@ components:
     font: ''
     font_size: null
     foreground: ''
-    icon: ''
+    icon: fa:edit
     icon_align: left
     italic: false
     role: secondary-color

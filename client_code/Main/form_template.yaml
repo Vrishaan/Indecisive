@@ -93,28 +93,28 @@ components:
   - event_bindings: {click: home_link_click}
     layout_properties: {}
     name: home_link
-    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: HOME, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: 'fa:home', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: HOME, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - event_bindings: {click: shop_link_click}
     layout_properties: {}
     name: shop_link
-    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: SHOP, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: 'fa:shopping-bag', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: SHOP, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - event_bindings: {click: contact_link_click}
     layout_properties: {}
     name: contact_link
-    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: '', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: CONTACT, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: 'theme:Black', icon: 'fa:map-marker', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: CONTACT, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - components: []
     event_bindings: {click: about_link_click}
     layout_properties: {}
     name: about_link
-    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '{}', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: ABOUT, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '{}', font: '', font_size: 16, foreground: 'theme:Black', icon: 'fa:info-circle', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: ABOUT, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - event_bindings: {click: Order_Status_link_click}
     layout_properties: {}
     name: Order_Status_link
-    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '{}', font: '', font_size: 16, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: ORDER STATUS, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '{}', font: '', font_size: 16, foreground: 'theme:Black', icon: 'fa:dropbox', icon_align: left, italic: false, role: spaced-title, spacing_above: small, spacing_below: small, text: ORDER STATUS, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   - layout_properties: {}
     name: insta_link
@@ -128,7 +128,7 @@ components:
   - event_bindings: {click: link_1_click}
     layout_properties: {}
     name: link_1
-    properties: {font_size: 16, foreground: 'theme:Black', icon: 'fa:sign-out', text: LOG OUT}
+    properties: {font_size: 16, foreground: 'theme:Black', icon: 'fa:sign-out', icon_align: right, text: LOG OUT}
     type: Link
   layout_properties: {slot: nav-right}
   name: navbar_links

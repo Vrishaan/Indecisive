@@ -24,7 +24,7 @@ components:
     font: ''
     font_size: null
     foreground: ''
-    icon: ''
+    icon: fa:trash
     icon_align: left
     italic: false
     role: secondary-color
