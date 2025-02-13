@@ -16,25 +16,13 @@ class Shop(ShopTemplate):
     
     self.banner.role = ['spaced-title', 'left-right-padding']
     
-    # Load all products from the database
     self.all_products = list(app_tables.products.search())
     
-    # Initially display all products
     self.display_products(self.all_products)
 
   def display_products(self, products):
-    """Populate the FlowPanel with products"""
-    self.flow_panel_1.clear()  # Clear the FlowPanel
-    
-    if products:
-      # Add each product as a component to the FlowPanel
-      for p in products:
-        self.flow_panel_1.add_component(Product(item=p), width='30%')
-    else:
-      # Display a message if no products match the search query
-      self.flow_panel_1.add_component(
-          Label(text="No products found.", align="center", role="headline")
-      )
+   for p in products:
+     self.flow_panel_1.add_component(Product(item=p), width='30%')
 
   def search_box_pressed_enter(self, **event_args):
     """Called when the user presses Enter in the search box"""
