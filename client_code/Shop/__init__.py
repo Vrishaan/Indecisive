@@ -26,18 +26,15 @@ class Shop(ShopTemplate):
 
   def search_box_pressed_enter(self, **event_args):
     """Called when the user presses Enter in the search box"""
-    search_query = self.search_box.text.lower()  # Get the search query in lowercase
+    search_query = self.search_box.text.lower()  
     
-    # Filter products by name or description
     filtered_products = [
       p for p in self.all_products
       if search_query in p['name'].lower() or search_query in p['description'].lower()
     ]
     
-    # Display the filtered products or a no-match message
     self.display_products(filtered_products)
     
-    # Clear the search box after taking input
     self.search_box.text = ""
 
   def shop_button_click(self, **event_args):
