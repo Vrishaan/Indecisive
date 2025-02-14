@@ -41,7 +41,7 @@ components:
         font: ''
         font_size: null
         foreground: theme:Black
-        icon: ''
+        icon: fa:phone
         icon_align: left
         italic: false
         role: null
@@ -56,11 +56,11 @@ components:
       type: Label
     - layout_properties: {grid_position: 'UGMRFF,AHSXUN VIQBXT,VIPLPG DLYFKT,GOJNEL'}
       name: label_2
-      properties: {align: center, foreground: 'theme:Black', text: '9930655425'}
+      properties: {align: center, foreground: 'theme:Black', icon: 'fa:phone', text: '9930655425'}
       type: Label
     - layout_properties: {grid_position: 'UGMRFF,AHSXUN VIQBXT,VIPLPG MJULXG,AQQAAY'}
       name: label_3
-      properties: {align: center, foreground: 'theme:Black', text: theindecisiveclothingstore@gmail.com}
+      properties: {align: center, foreground: 'theme:Black', icon: 'fa:envelope', text: theindecisiveclothingstore@gmail.com}
       type: Label
     - layout_properties: {grid_position: 'DOXFAF,USBKNR'}
       name: spacer_5
