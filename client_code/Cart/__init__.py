@@ -15,7 +15,7 @@ class Cart(CartTemplate):
         user = anvil.users.get_user()
         user_email = user['email']
         rows = app_tables.cart.search(email=user_email)
-        # Explicitly check if rows exist
+        # Check if rows exist
         if len(list(rows)) > 0:  # Convert to a list to count rows
           self.empty_cart_panel.visible = False
           self.column_panel_1.visible = True
