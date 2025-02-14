@@ -21,7 +21,7 @@ class AddToCart(AddToCartTemplate):
         # Ensure drop_down_1 (quantity) is blank when the form is shown
         self.drop_down_1.selected_value = None
 
-    # Add to Cart Form: Updating the add_button_click method
+    # Add to Cart Form: add_button_click method
     def add_button_click(self, **event_args):
         if self.drop_down_2.selected_value is not None and self.drop_down_1.selected_value is not None:
             # Get the selected size and quantity
