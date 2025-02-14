@@ -48,7 +48,6 @@ class AddToCart(AddToCartTemplate):
             # Reset the drop-downs
             self.drop_down_1.selected_value = None
             self.drop_down_2.selected_value = None
-            self.label_4.text = "Select Size and Quantity"
             alert(f"{quantity} x {self.item['name']}({size}) added to cart.")
         else:
             alert("Please select both size and quantity before adding to cart.")
