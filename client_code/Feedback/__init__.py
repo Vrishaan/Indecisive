@@ -9,13 +9,10 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-
 class Feedback(FeedbackTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-
-        # Fetch all feedback records from the "Feedback" table
         self.all_feedback = list(app_tables.feedback.search())  # Store all feedback in a list
         self.display_products(self.all_feedback)  # Initially display all feedback
 
@@ -25,10 +22,8 @@ class Feedback(FeedbackTemplate):
         self.repeating_panel_1.items = feedback_records  # Bind the records to a repeating panel
 
     def display_products(self, feedback_list):
-        """
-        Displays the given list of feedback records in the UI.
-        Binds the feedback data to the repeating panel.
-        """
+        """ Displays the given list of feedback records in the UI.
+        Binds the feedback data to the repeating panel. """
         if feedback_list:
             self.repeating_panel_1.items = feedback_list  # Bind the data to the RepeatingPanel
         else:
@@ -72,12 +67,6 @@ class Feedback(FeedbackTemplate):
      elif selected_value == "Seen":
         # Show feedback with the 'seen' attribute set to True
         filtered_feedback = [feedback for feedback in self.all_feedback if feedback['seen']]
-     else:
-        # If no valid option is selected, show no feedback
-        filtered_feedback = []
 
     # Display the filtered feedback
      self.display_products(filtered_feedback)
-
-
-
