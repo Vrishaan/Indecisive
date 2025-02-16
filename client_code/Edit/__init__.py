@@ -46,14 +46,7 @@ class Edit(EditTemplate):
         try:
             # Get the edited values from the textboxes
             edited_name = self.text_box_name.text
-            
-            # Clean and convert the price input (remove "Rs:" and convert to float)
-            price_text = self.text_box_price.text
-            if price_text.startswith("Rs:"):
-                edited_price = float(price_text.replace("Rs:", "").strip())  # Remove "Rs:" and any leading spaces
-            else:
-                raise ValueError("Invalid price format. Please enter price as 'Rs: <amount>'.")
-
+            edited_price = int(self.text_box_price.text)
             edited_description = self.text_box_description.text
 
             # Initialize quantities as None by default
@@ -135,17 +128,17 @@ class Edit(EditTemplate):
         if small_row:
             self.stock_label.text = f"S: {small_row['stock']} Remaining in Stock"
         else:
-            self.stock_label.text = "S: Not found in the database"
+            self.stock_label.text = "S: Not found"
 
         if medium_row:
             self.stock_label_copy.text = f"M: {medium_row['stock']} Remaining in Stock"
         else:
-            self.stock_label_copy.text = "M: Not found in the database"
+            self.stock_label_copy.text = "M: Not found"
 
         if large_row:
             self.stock_label_copy_2.text = f"L: {large_row['stock']} Remaining in Stock"
         else:
-            self.stock_label_copy_2.text = "L: Not found in the database"
+            self.stock_label_copy_2.text = "L: Not found"
 
     def delete_click(self, **event_args):
         """This method is called when the delete button is clicked to delete the product."""

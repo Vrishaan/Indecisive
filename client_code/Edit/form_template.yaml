@@ -10,18 +10,30 @@ components:
   name: file_loader_1
   properties: {}
   type: FileLoader
+- layout_properties: {grid_position: 'XWJJFA,BTUFOG NOXGJJ,MUFSVE'}
+  name: label_4_copy
+  properties: {foreground: 'theme:Black', text: 'Name:'}
+  type: Label
 - data_bindings:
   - {code: 'self.item[''name'']', property: text, writeback: false}
   layout_properties: {grid_position: 'XWJJFA,BTUFOG NOXGJJ,GGNANV'}
   name: text_box_name
   properties: {background: 'theme:White', foreground: 'theme:Black'}
   type: TextBox
+- layout_properties: {grid_position: 'XWJJFA,BTUFOG RRGFFF,ZHUUWC'}
+  name: label_2
+  properties: {foreground: 'theme:Black', text: 'Rs:'}
+  type: Label
 - data_bindings:
-  - {code: 'f"Rs: {self.item[''price'']}"', property: text, writeback: false}
+  - {code: 'f"{self.item[''price'']}"', property: text, writeback: false}
   layout_properties: {grid_position: 'XWJJFA,BTUFOG RRGFFF,JZZBZT'}
   name: text_box_price
   properties: {background: 'theme:White', foreground: 'theme:Black', text: ''}
   type: TextBox
+- layout_properties: {grid_position: 'XWJJFA,BTUFOG CGBTUP,PXGHVI'}
+  name: label_4
+  properties: {foreground: 'theme:Black', text: 'Description:'}
+  type: Label
 - data_bindings:
   - {code: 'self.item[''description'']', property: text, writeback: false}
   layout_properties: {grid_position: 'XWJJFA,BTUFOG CGBTUP,KPZSYL'}
@@ -44,33 +56,33 @@ components:
   type: CheckBox
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG MVHAOW,ZHZQMM WTTHOU,SBPWJM'}
   name: label_3
-  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Quantity (S):', tooltip: '', underline: false, visible: true}
+  properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Quantity (S):', tooltip: '', underline: false, visible: true}
   type: Label
 - data_bindings: []
   event_bindings: {}
   layout_properties: {grid_position: 'XWJJFA,BTUFOG MVHAOW,ZHZQMM HMYDMT,JQZMKG'}
   name: stock_label
-  properties: {foreground: 'theme:Black', text: ''}
+  properties: {align: center, foreground: 'theme:Black', text: ''}
   type: Label
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG MVHAOW,CZKYQS YMZWTY,POQHXH'}
   name: label_3_copy
-  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Quantity (M):', tooltip: '', underline: false, visible: true}
+  properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Quantity (M):', tooltip: '', underline: false, visible: true}
   type: Label
 - data_bindings: []
   event_bindings: {}
   layout_properties: {grid_position: 'XWJJFA,BTUFOG MVHAOW,CZKYQS IMQYBV,FFMJBH'}
   name: stock_label_copy
-  properties: {foreground: 'theme:Black', text: ''}
+  properties: {align: center, foreground: 'theme:Black', text: ''}
   type: Label
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG MVHAOW,NKMGJR LSASSG,QPTGXB'}
   name: label_3_copy_2
-  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Quantity (L):', tooltip: '', underline: false, visible: true}
+  properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Quantity (L):', tooltip: '', underline: false, visible: true}
   type: Label
 - data_bindings: []
   event_bindings: {}
   layout_properties: {grid_position: 'XWJJFA,BTUFOG MVHAOW,NKMGJR IVDRZU,OQOCTX'}
   name: stock_label_copy_2
-  properties: {foreground: 'theme:Black', text: ''}
+  properties: {align: center, foreground: 'theme:Black', text: ''}
   type: Label
 - layout_properties: {grid_position: 'XWJJFA,BTUFOG ZCKYMK,DZPZWZ'}
   name: quantity_box
@@ -112,6 +124,6 @@ components:
   properties: {interval: 0.5}
   type: Timer
 container:
-  properties: {background: 'theme:White', col_spacing: medium, col_widths: '{"LEUNSR":40,"SZTGSA":20}', foreground: 'theme:White', spacing_above: none, spacing_below: none}
+  properties: {background: 'theme:White', col_spacing: medium, col_widths: '{"LEUNSR":40,"SZTGSA":20,"ZHUUWC":5,"JZZBZT":55,"PXGHVI":15,"KPZSYL":45,"MUFSVE":10,"GGNANV":50}', foreground: 'theme:White', spacing_above: none, spacing_below: none}
   type: ColumnPanel
 is_package: true
