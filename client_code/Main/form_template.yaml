@@ -19,6 +19,10 @@ components:
       name: label_7
       properties: {align: center, background: 'theme:White', bold: false, border: '', font: Yeseva One, font_size: 24, foreground: 'theme:Black', icon: '', icon_align: left, italic: false, role: logo, spacing_above: small, spacing_below: small, text: Indecisive Clothing Store, tooltip: '', underline: false, visible: true}
       type: Label
+    - layout_properties: {grid_position: 'UGMRFF,AHSXUN VIQBXT,VFQQBI'}
+      name: spacer_1_copy
+      properties: {height: 32}
+      type: Spacer
     - layout_properties: {grid_position: 'UGMRFF,AHSXUN VIQBXT,ALLVMZ ZZMPIE,PVOBRT'}
       name: spacer_2
       properties: {height: 11}

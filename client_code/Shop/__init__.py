@@ -21,6 +21,7 @@ class Shop(ShopTemplate):
     self.display_products(self.all_products)
 
   def display_products(self, products):
+   self.flow_panel_1.clear()
    for p in products:
      self.flow_panel_1.add_component(Product(item=p), width='30%')
 
