@@ -81,14 +81,20 @@ class Edit(EditTemplate):
                 size_row['stock'] = large_quantity
                 Notification(f"Quantity (L) updated to: {large_quantity}").show()
 
-            # Fetch the product row from the database
+            # Fetch the product and size row from the database
             product_name = self.item['name']  # Access the product's 'name'
             product_row = app_tables.products.get(name=product_name)
+            # Fetch all size rows where name matches the product
+            size_rows = app_tables.size.search(name=product_name)
 
             # Only update product details (name, price, description, bestseller) if they are changed
             if product_row:
                 if product_row['name'] != edited_name:
                     product_row['name'] = edited_name
+                    # Update all matching size rows
+                    for size_row in size_rows:
+                     size_row['name'] = edited_name  # Change the name  
+            
                     Notification(f"Product name updated to {edited_name}").show()
 
                 if product_row['price'] != edited_price:

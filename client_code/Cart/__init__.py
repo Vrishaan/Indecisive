@@ -74,7 +74,7 @@ class Cart(CartTemplate):
                 currency="INR",
                 shipping_address=True,
                 title="Indecisive Clothing Store",
-                icon_url="_/theme/cupcake_logo.png"
+                icon_url="_/theme/Logo%20.png"
             )
             
             # Validate the response and process the order
