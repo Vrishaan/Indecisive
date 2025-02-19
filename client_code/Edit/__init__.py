@@ -94,37 +94,31 @@ class Edit(EditTemplate):
                     # Update all matching size rows
                     for size_row in size_rows:
                      size_row['name'] = edited_name  # Change the name  
-            
                     Notification(f"Product name updated to {edited_name}").show()
-
                 if product_row['price'] != edited_price:
                     product_row['price'] = edited_price
                     Notification(f"Product price updated to Rs: {edited_price}").show()
-
                 if product_row['description'] != edited_description:
                     product_row['description'] = edited_description
                     Notification("Product description updated.").show()
-
                 # Update the bestseller status
                 bestseller_status = self.check_box_1.checked  # Get the value of the checkbox
                 if product_row['best_seller'] != bestseller_status:
                     product_row['best_seller'] = bestseller_status
                     Notification(f"Product best seller status updated to: {bestseller_status}").show()
-                  
                 # Check if a new image was selected and update the product's image
                 if self.selected_image:
                     product_row['img'] = self.selected_image  # Update the image field in the database
                     Notification("Product image updated.").show()
-
                 if self.selected_image_1:
                     product_row['img_2'] = self.selected_image_1 # Update the image field in the database
                     Notification("Product image updated.").show()
-
+                  
                 self.add_button.visible = False
                 self.added_button.visible = True
                 self.timer_1.interval = 2
-                
-
+                #Update the stock display after the update
+                self.update_stock_display()
         except ValueError as e:
             # Show the specific error message
             Notification(str(e)).show()

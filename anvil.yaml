@@ -75,19 +75,19 @@ db_schema:
   products:
     client: full
     columns:
-    - admin_ui: {width: 200}
+    - admin_ui: {order: 0, width: 129}
       name: name
       type: string
-    - admin_ui: {width: 200}
+    - admin_ui: {order: 1, width: 283}
       name: description
       type: string
     - admin_ui: {order: 3, width: 200}
       name: img
       type: media
-    - admin_ui: {width: 200}
+    - admin_ui: {order: 4, width: 131}
       name: best_seller
       type: bool
-    - admin_ui: {order: 2, width: 200}
+    - admin_ui: {order: 2, width: 126}
       name: price
       type: number
     - admin_ui: {order: 3.5, width: 200}

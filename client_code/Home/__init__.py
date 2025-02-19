@@ -19,12 +19,6 @@ class Home(HomeTemplate):
     
     for p in best_sellers:
       self.flow_panel_1.add_component(Product(item=p), width='30%')
-    
-
-  def flow_panel_1_show(self, **event_args):
-    """Handler for when flow_panel_1 is shown"""
-    # Add any necessary logic here or leave it as a placeholder
-    pass
 
   def shop_button_click(self, **event_args):
     """This method is called when the button is clicked"""
