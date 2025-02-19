@@ -30,11 +30,6 @@ class AdminHome(AdminHomeTemplate):
       # Add each product as a component to the FlowPanel
       for p in products:
         self.flow_panel_1.add_component(Admin_Products(item=p), width='30%')
-    else:
-      # Display a message if no products match the search query
-      self.flow_panel_1.add_component(
-          Label(text="No products found.", align="center", role="headline")
-      )
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -51,7 +46,7 @@ class AdminHome(AdminHomeTemplate):
       if search_query in p['name'].lower() or search_query in p['description'].lower()
     ]
     
-    # Display the filtered products or a no-match message
+    # Display the filtered products 
     self.display_products(filtered_products)
     
     # Clear the search box after taking input

@@ -15,18 +15,28 @@ class Edit(EditTemplate):
       
         # Initialize the selected_image attribute to None
         self.selected_image = None
+        self.selected_image_1 = None
         self.image_1.source = self.item['img']
+        self.image_2.source = self.item['img_2']
     
 
     def file_loader_1_change(self, **event_args):
         """This method is triggered when the user selects a file to upload."""
         # Load the image data when the file is selected
         file = self.file_loader_1.file  # FileLoader component to fetch the uploaded file
-
         if file:
             # Set the image to the uploaded file for preview
             self.selected_image = file
             self.image_1.source = self.selected_image  # Update the Image component with the selected image
+
+    def file_loader_2_change(self, **event_args):
+        """This method is triggered when the user selects a file to upload."""
+        # Load the image data when the file is selected
+        file_1 = self.file_loader_2.file  # FileLoader component to fetch the uploaded file
+        if file_1:
+            # Set the image to the uploaded file for preview
+            self.selected_image_1 = file_1
+            self.image_2.source = self.selected_image_1  # Update the Image component with the selected image
 
     def update_bestseller_checkbox(self):
         """Fetch and display the current bestseller status of the product."""
@@ -99,11 +109,15 @@ class Edit(EditTemplate):
                 if self.selected_image:
                     product_row['img'] = self.selected_image  # Update the image field in the database
                     Notification("Product image updated.").show()
+
+                if self.selected_image_1:
+                    product_row['img_2'] = self.selected_image_1 # Update the image field in the database
+                    Notification("Product image updated.").show()
+
                 self.add_button.visible = False
                 self.added_button.visible = True
                 self.timer_1.interval = 2
-            # Update the stock display after the update
-            self.update_stock_display()
+                
 
         except ValueError as e:
             # Show the specific error message

@@ -22,7 +22,7 @@ class AddProduct(AddProductTemplate):
     large = self.quantity_box_copy_2.text
 
     # Check if any required field is empty
-    if not name or not description or not price_text or not self.file_loader_1.file:
+    if not name or not description or not price_text or not self.file_loader_1.file or not self.file_loader_2.file:
         alert("Please fill in all the fields.")
         return  # Stop the function if any field is empty
 
@@ -39,10 +39,12 @@ class AddProduct(AddProductTemplate):
 
     is_best_seller = self.check_box_1.checked  # Checkbox value
     image = self.file_loader_1.file  # The image file uploaded by the user
+    image_2 = self.file_loader_2.file
     self.image_1.source = self.file_loader_1.file
+    self.image_2.source = self.file_loader_2.file
 
     # Call the server function to add the product to the database
-    anvil.server.call('add_product', name, description, price, stock, is_best_seller, image, small, medium, large)
+    anvil.server.call('add_product', name, description, price, stock, is_best_seller, image, image_2, small, medium, large)
     self.add_button.visible = False
     self.added_button.visible = True
     self.timer_1.interval = 2
@@ -56,12 +58,12 @@ class AddProduct(AddProductTemplate):
     self.quantity_box_copy_2.text = ''
     self.check_box_1.checked = False
     self.file_loader_1.clear()
+    self.file_loader_2.clear()
 
     # You can show a success message here
-    alert("Product added successfully!")
+    Notification("Product added successfully!").show()
     open_form('Admin')
 
-  # Assuming `file_loader_1` is your FileLoader and `image_1` is the Image component
 
   def file_loader_1_change(self, file, **event_args):
     # Check if a file is uploaded
@@ -74,3 +76,10 @@ class AddProduct(AddProductTemplate):
     self.add_button.visible = True
     self.added_button.visible = False
     pass
+
+  def file_loader_2_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
+    # Check if a file is uploaded
+    if file:
+        # Set the image_1 source to the uploaded file
+        self.image_2.source = file

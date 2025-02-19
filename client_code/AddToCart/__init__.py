@@ -16,10 +16,28 @@ class AddToCart(AddToCartTemplate):
         self.init_components(**properties)
         # Ensure drop_down_1 (quantity) is blank when the form is first initialized
         self.drop_down_1.selected_value = None
+        # Preload back image to eliminate lag
+        self.front_image = self.item['img']
+        self.back_image = self.item['img_2']
+
+        # Add hidden Image component to preload back image
+        self.hidden_image = Image(source=self.back_image, visible=False)
+        self.add_component(self.hidden_image)
+
+        # Set initial image
+        self.image_1.source = self.front_image
 
     def form_show(self, **event_args):
         # Ensure drop_down_1 (quantity) is blank when the form is shown
         self.drop_down_1.selected_value = None
+
+    def image_1_mouse_enter(self, x, y, **event_args):
+        """Show back image instantly when mouse hovers over the component"""
+        self.image_1.source = self.back_image
+
+    def image_1_mouse_leave(self, x, y, **event_args):
+        """Revert to front image instantly when the mouse leaves"""
+        self.image_1.source = self.front_image
 
     # Add to Cart Form: add_button_click method
     def add_button_click(self, **event_args):
@@ -48,7 +66,7 @@ class AddToCart(AddToCartTemplate):
             # Reset the drop-downs
             self.drop_down_1.selected_value = None
             self.drop_down_2.selected_value = None
-            alert(f"{quantity} x {self.item['name']}({size}) added to cart.")
+            Notification(f"{quantity} x {self.item['name']}({size}) added to cart.").show()
         else:
             alert("Please select both size and quantity before adding to cart.")
     def timer_1_tick(self, **event_args):
