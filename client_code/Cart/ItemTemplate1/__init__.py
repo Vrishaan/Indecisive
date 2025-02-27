@@ -27,7 +27,6 @@ class ItemTemplate1(ItemTemplate1Template):
      row_to_delete = app_tables.cart.get(name=product_name, size=product_size, email=user_email)
      # Delete the row
      row_to_delete.delete()
-     print(f"{product_name} of size {product_size} has been removed from the cart.")
      # Refresh the repeating panel
      get_open_form().cart_link_click()
 
