@@ -1,10 +1,10 @@
 from ._anvil_designer import Admin_OrdersTemplate
 from anvil import *
+import anvil.google.auth, anvil.google.drive
+from anvil.google.drive import app_files
 import anvil.server
 import anvil.users
 import stripe.checkout
-import anvil.google.auth, anvil.google.drive
-from anvil.google.drive import app_files
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables

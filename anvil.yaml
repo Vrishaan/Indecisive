@@ -157,9 +157,6 @@ services:
   server_config: {}
   source: /runtime/services/tables.yml
 - client_config: {}
-  server_config: {enc_delegation_refresh_token: 5dZd5hOuDiDHMAn0j8K4VWL9MJC6XetZwdW1h/sfFSZHAQgci5yCafoW3n3qTHCWogLoOZi+IsjgeXDBxxb5MBiNmiUHhl7I3L1oRJaM/y5+D1zojTIryKRAl+EfFQCjMFwYJ8GACLSZPDf6C7Dn9hNfdQgksdBtd/FKclz5g+oztdJehTPoPdO7jbqPJ4k+xmicE/vzIAgaIWBu8s8epIgvKfGaEMFjm6LJRQWuybOrVBzg8eMy/O6lIWExNcMbqnjmdeHAu0pVvPBBGupFkMZzxev7dvMcqFGma+SjkI7U5J3jpLm/TQcCREKP}
-  source: /runtime/services/google.yml
-- client_config: {}
   server_config: {refresh_token: rt_RYfr7gXScXkupuH8QrSYS1r8IeUIF1QsYbWjk5wVuxCr2v0k, stripe_user_id: acct_1QfRLA03WCqa62em}
   source: /runtime/services/stripe.yml
 - client_config: {allow_signup: true, confirm_email: true, enable_automatically: true, use_email: true, use_google: false}
@@ -168,5 +165,8 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/anvil/email.yml
+- client_config: {}
+  server_config: {enc_delegation_refresh_token: jXd4L2oqIBXftYGKbXFOPgUe67Nt7/Nshvh0PcyqAQ4BonC4kXDoQaQGP4XWfaH687SfLs+yJvH7w0TFUITtbbnQJlxhC0xY8PpJr20cyBQ1mP0KYARQUZeEbhhEO+IdA3kH98iWR2HmSK1u36TDrAMavt/8uQ5rA8ETAmQP+MdCvQLjgEzoYT4MtwJn0TCEjCJWwWZBBLFKXDR6g6JL36XqkGxHoSkS7pSjmKqMkQFhMsT1fcmrquI8pQEw4jo7k1Qd8wtW+FKvAgX6qQ7efFUD/7jKa2TG10NDmaCA20eVzcXXMcVWKxgblica9w==}
+  source: /runtime/services/google.yml
 startup: {module: Login, type: form}
 startup_form: null
